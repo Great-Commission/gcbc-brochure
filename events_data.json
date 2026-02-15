@@ -1,0 +1,331 @@
+{
+  "church_info": {
+    "name": "Great Commission Bible Church",
+    "logo_path": "logo.png",
+    "tagline": "Welcome to Great Commission Bible Church"
+  },
+  "rotating_messages": [
+    {
+      "title": "The Great Commission",
+      "scripture": "Matthew 28:18-20",
+      "text": "Then Jesus came to them and said, \"All authority on heaven and on earth has been given to Me. Therefore go and make disciples of all nations baptizing them in the name of the Father, and of the Holy Spirit and teaching them to obey everything I have commanded you and surely I am with you always, to the very end of age\""
+    },
+    {
+      "title": "Sunday Service",
+      "text": "Join us every Sunday at 9:00 AM for worship and fellowship"
+    },
+    {
+      "title": "🙏 Prayer For...",
+      "text": "• The youth of Trinidad and Tobago <br> • This person <br> • Yourself"
+    },
+    {
+      "title": "Peter's Fishing",
+      "text": "Jesus walked up to Peter and said, 'Follow me, and I will make you fishers of men.' Peter replied, 'That's great, but can you teach me to catch something for dinner first?'"
+    },
+    {
+      "title": "Pastor Humor",
+      "text": "A pastor was asked, 'Do you pray before you preach?' He said, 'Of course! How else would I know what I'm about to say?'"
+    }
+  ],
+  "sidebar_tabs": {
+    "home": {
+      "welcome_text": "Welcome to Great Commission Bible Church. We are a community of believers dedicated to spreading the Gospel and making disciples. Join us as we worship, learn, and grow together in faith."
+    },
+    "sermons": {
+      "January": [{}],
+      "February": [
+        {
+          "date": 18,
+          "title": "An invitation to celebrate pt.1",
+          "scripture": "1 Chronicles 29:1-9",
+          "summary": "The leaders and people of Israel gave willingly to the construction of the Temple. The people rejoiced at its completion, for they had given freely and wholeheartedly to the Lord for the building of His Temple. ",
+          "key_points": [] 
+        },
+        {
+          "date": 25,
+          "title": "An invitation to celebrate pt.2 (Invitation, Participation, Rejoicing)",
+          "scripture": "Ephesians 2:19-22",
+          "summary": "We are part of the Body of Christ, built on the foundation of the apostles and the prophets, with Christ as the chief cornerstone. We are built together to be a dwelling (a Holy Temple for God), in which God lives by His Holy Spirit.",
+          "key_points": [
+            "Invitation :- God invites us to participate in a glorious celebration. It's a journey that requires us to Listen, Submit, and Rejoice.",
+            "We are to listen as God calls, submitting outselves to Him as a living sacrifice (Romans 12: 1-2)",
+            "Participation :- We are to willingly give of our time, abilities, resources etc. We are to get involved. ",
+            "Rejoicing :- We rejoice at the outcome as we are  willing, enthusiastic and grateful to be part of the Body of Christ (His Temple)."   
+          ]     
+        }
+      ],
+      "March": [{}],
+      "April": [{}],
+      "May": [{}],
+      "June": [{}],
+      "July": [{}],
+      "August": [{}],
+      "September": [{}],
+      "October": [{}],
+      "November": [{}],
+      "December": [{}]
+    },
+    "events": {
+      "permanant": [
+        {
+          "title": "Sunday Worship Service",
+          "date": "Every Sunday",
+          "time": "9:00 AM",
+          "location": "Think Art Work Studio, Level 2 THINKARTWORKTT",
+          "description": "Join us for worship, prayer, and fellowship"
+        },
+        {
+          "title": "Kids Club",
+          "date": "Every Sunday",
+          "time": "10:15 AM",
+          "location": "Think Art Work Studio, Level 2 THINKARTWORKTT",
+          "description": ""
+        }
+      ],
+      "January": [{}],
+      "February": [{}],
+      "March": [{}],
+      "April": [{}],
+      "May": [{}],
+      "June": [{}],
+      "July": [{}],
+      "August": [{}],
+      "September": [{}],
+      "October": [{}],
+      "November": [{}],
+      "December": [{}]
+    },
+    "announcements": [
+      "Family Meeting next month, March 15"
+    ],
+    "contact": {
+      "phone": "1-(868)-299-8281",
+      "mail": "GCBC c/o Terry Ann Derrick, #4 Issac Place Cascade",
+      "email": "greatcommissiontt@gmail.com",
+      "address": "Think Art Work Studio, Level 2 THINKARTWORKTT, 11 Cipriani Boulevard, Port of Spain."
+    },
+    "about": {
+      "mission": "By His <span class='highlight'>Power</span><br>Though His <span class='highlight'>Plan</span><br>With Him <span class='highlight'>Present</span><br>We Will <span class='highlight'>Partner</span> Together<br>To <span class='highlight'>Produce</span> Disciples",
+      "leadership": "Shannon Fancis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno"
+    },
+    "birthdays": {
+      "January": [
+        {
+          "name": "Alysha Small",
+          "date": 6          
+        },
+        {
+          "name": "Mark Douglas",
+          "date": 14
+        },
+        {
+          "name": "Ruth Hospedales",
+          "date": 21
+        },
+        {
+          "name": "Tricia Kalloo",
+          "date": 23
+        },
+        {
+          "name": "Nerissa Derek",
+          "date": 25
+        },
+        {
+          "name": "Kade Elliot",
+          "date": 31
+        }
+      ],
+      "February": [
+        {
+          "name": "Christoff Elliot",
+          "date": 3
+        },
+        {
+          "name": "Zane Walker",
+          "date": 9          
+        },
+        {
+          "name": "Seema Singh",
+          "date": 23          
+        },
+        {
+          "name": "Christian Singh",
+          "date": 28
+        }
+      ],
+      "March": [
+        {
+          "name": "Stafford Elliot",
+          "date": 7
+        },
+        {
+          "name": "Terry Ann Derrick",
+          "date": 8          
+        },
+        {
+          "name": "Serenity",
+          "date": 9          
+        },
+        {
+          "name": "Tamara Theophilus",
+          "date": 20          
+        },
+        {
+          "name": "Kizzie Hope",
+          "date": 20
+        },
+        {
+          "name": "Leah Elliot",
+          "date": 20          
+        },
+        {
+          "name": "Mark Theophilus",
+          "date": 30          
+        }
+      ],
+      "April": [
+        {
+          "name": "Stephan Elliot",
+          "date": 18          
+        },
+        {
+          "name": "Rolly Ramdin",
+          "date": 18          
+        },
+        {
+          "name": "Vanessa Hernandez",
+          "date": 25          
+        }
+      ],
+      "May": [{}],
+      "June": [{}],
+      "July": [{}],
+      "August": [{}],
+      "September": [{}],
+      "October": [{}],
+      "November": [{}],
+      "December": [{}]
+    },
+    "anniversaries": {
+      "January": [{}],
+      "February": [{}],
+      "March": [
+        {
+          "couple": "Stephan & Juanita Elliot",
+          "date": 16 
+        }
+      ],
+      "April": [
+        {
+          "couple": "Rolly & Margaret Ramdin",
+          "date": 13           
+        }
+      ],
+      "May": [{}],
+      "June": [{}],
+      "July": [{}],
+      "August": [{}],
+      "September": [{}],
+      "October": [{}],
+      "November": [{}],
+      "December": [{}]      
+    },
+    "wisdom_tips": {
+      "January": {},
+      "February": {
+        "title": "General Reading Comprehension Tips",
+        "tip": "Which can improve focus and understanding",
+        "steps": [
+          "Actively engage an interact with texts.",
+          "Intergrate prior knowledge",
+          "Keep brain actively engaged while reading",
+          "Decrease distractions.",
+          "Break the text into manageable sections.",
+          "Summarize what is the main idea of the passage.",
+          "Create mental image of the passage.",
+          "Determine the important ideas or themes of the passage."
+        ],
+        "verse": "", 
+        "verse_text": "",
+        "theme": "Better reading",
+        "author": "Sister Carmen"      
+      },
+      "March": {},
+      "April": {},
+      "May": {},
+      "June": {},
+      "July": {},
+      "August": {},
+      "September": {},
+      "October": {},
+      "November": {},
+      "December": {}
+    },
+    "inspire": {
+      "January": {},
+      "February": {
+        "verse_of_the_month": {
+          "verse": "Ephesians 2: 10",
+          "text": "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.",
+          "theme": "We are born to do God's work"
+        },
+        "featured_testimony": {
+          "name": "Sister Lee",
+          "date": "Februrary 2026",
+          "testimony": "My mother faithfully did her best to teach me about Jesus. I actually understood in my early 20’s that God’s ways are better than my ways when I became a single mother.  I believe I was told by God Himself in my darkest moment,  “But Jesus forgives sin”.  Looking back, I think this was the point when I made Jesus my “Saviour”  because there was nothing I could do about my sin. It took another a few years, to learn and understand that God  redeems sin - past, present and future, and could and would work it for my good and His glory (Romans 8:28, Isaiah 61:1-4).  I was ALL in! I surrendered my life to Jesus to be used for His eternal purposes. I now know this is what it means to make Jesus my “Lord”.  The Lord was and continued to be faithful to His sanctifying work and establishing my identity as His daughter over the next 20 years. I continually sought to serve Him - my passion and sweet spot being facilitating ladies Bible study, sharing what I was learning. But, there was more. Around turning 50, God began to show me my need for His healing love that deepens and seals a trusting relationship with Him; no doubts and fears about His sovereignty over my life no matter the stormy circumstances. This is the place of true rest for my soul. There are not enough words to express my gratitude.",
+          "verse": ""
+        }
+      },
+      "March": {},
+      "April": {},
+      "May": {},
+      "June": {},
+      "July": {},
+      "August": {},
+      "September": {},
+      "October": {},
+      "November": {},
+      "December": {}
+    },
+    "missions":{
+      "January": {},
+      "February": {
+        "featured": "Bible translation",
+        "video": {
+          "type": "",
+          "url": "",
+          "title": "",
+          "duration": ""
+        },
+        "update": {
+          "message": "• 739,600 languages in the world <br> • 407,000 active projects <br> • 544 remaining no language <br> • and no projects for 36.8 million people",
+          "author": "Shanna Elliot-Mohammed"
+        },
+        "prayer_points": [
+          "🛡️ Safety for the team that goes out to translate in the countries language",
+          "📚 oppertunity to reach the people who havent heard of God and his word",
+          "❤️ Open hearts in the community"
+        ],
+        "progress": {
+          "label": "Languages with active translation projects",
+          "percentage": 55
+        },
+        "support": {
+          "give_link": "",
+          "email": "",
+          "drive": ""
+        }
+      },
+      "March": {},
+      "April": {},
+      "May": {},
+      "June": {},
+      "July": {},
+      "August": {},
+      "September": {},
+      "October": {},
+      "November": {},
+      "December": {}
+    }
+  }
+}
