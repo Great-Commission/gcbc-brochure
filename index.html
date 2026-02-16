@@ -10,7 +10,20 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Make sure active content section scrolls properly */
+        .content-section.active {
+            height: 100%;
+            overflow-y: visible;
+        }        
+                
         body {
             font-family: 'Georgia', serif;
             height: 100vh;
@@ -1368,13 +1381,16 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                height 100vh;
+                overflow: hidden;
             }
             
             /* Right container (Church Info) moves to TOP */
             .right-container {
                 width: 100%;
-                height: auto;  
-                min-height: 20vh;  
+                height: auto; 
+                min-height: 18vh; 
+                max-height: 20vh;  
                 order: 1;  /* Makes it appear first */
                 padding: 15px;
                 justify-content: center;
@@ -1383,7 +1399,7 @@
             /* Left container (Sidebar + Content) moves to BOTTOM */
             .left-container {
                 width: 100%;
-                height: 80vh;  
+                height: 82vh;  
                 order: 2;  
                 flex-direction: column;  
             }
@@ -1403,21 +1419,27 @@
                 white-space: nowrap;
                 gap: 3px;
                 order: 1;
+                flex-shrink: 0;
             }
             
             .tab-button {
-                padding: 8px 6px;
+                padding: 6px 4px;
                 margin: 0 1px;
                 min-width: 55px;
             }
             
             .tab-icon {
-                font-size: 18px;
+                font-size: 16px;
                 margin-bottom: 2px;
+            }
+
+            .tab-icon img.icon-image {
+                width: 20px;
+                height: 20px;
             }
             
             .tab-text {
-                font-size: 9px;
+                font-size: 8px;
             }
             
             .tab-text span {
@@ -1428,52 +1450,83 @@
             /* Content area below horizontal sidebar */
             .content-area {
                 width: 100%;
-                height: calc(80vh - 70px);  
-                padding: 20px;
-                overflow-y: auto;
+                height: calc(82vh - 60px);  
+                padding: 15px;
+                overflow-y: auto !important;
                 order: 2;
+                flex: 1;
             }
+
+            .content-section.active {
+                padding-bottom: 30px;  /* Extra space at bottom */
+            }
+
+            .share-cta, 
+            .support-section,
+            .no-mission,
+            .event-item:last-child,
+            .sermon-card:last-child {
+                margin-bottom: 20px;  /* Space at bottom */
+            }                        
             
             /* Church logo adjustments for mobile top */
             .church-header {
-                margin-bottom: 5px;
+                margin-bottom: 0;
             }
             
             .church-logo {
-                margin: 0 auto 10px;
+                margin: 0 auto 5px;
             }
             
             .church-logo img {
-                max-width: 120px;
-                width: 50%;
+                max-width: 80px;
+                width: auto;
+                max-height: 6vh;
             }
             
             .church-name {
-                font-size: 20px;
-                margin-bottom: 4px;
+                font-size: 16px;
+                margin-bottom: 2px;
+                line-height: 1.2;
             }
             
             .church-tagline {
-                font-size: 12px;
+                font-size: 10px;
             }
             
             /* Slideshow adjustments for mobile */
             .slideshow-image.active {
-                opacity: 0.4;  
+                opacity: 0.3;  
             }
 
-
             .section-title {
-                font-size: 24px;
+                font-size: 22px;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
+                gap: 8px;
+                margin-bottom: 20px;
             }
             
             .date-badge {
+                font-size: 12px;
+                padding: 3px 10px;
+            }
+
+            .event-item,
+            .sermon-card,
+            .verse-card,
+            .testimony-section,
+            .mission-card,
+            .video-section {
+                margin-bottom: 15px;
+            }
+
+            .share-email,
+            .video-link,
+            .support-email {
+                padding: 10px 20px;
                 font-size: 14px;
-                padding: 4px 12px;
-            }   
+            }                           
 
             /*Inspire Tab for mobile */
             .verse-text {
@@ -1490,10 +1543,6 @@
             
             .testimony-card {
                 padding: 15px;
-            }
-            
-            .share-cta {
-                padding: 20px;
             }
             
             .share-cta h3 {
@@ -1682,7 +1731,7 @@
             <div class="content-area">
                 <!-- HOME TAB (tab 0) -->
                 <div class="content-section active">
-                    <div class="section-title">Welcome <span class="date-badge">📅 15 February, 2026</span></div>
+                    <div class="section-title">Welcome <span class="date-badge">📅 February, 2026</span></div>
                     <p class="welcome-text">Welcome to Great Commission Bible Church. We are a community of believers dedicated to spreading the Gospel and making disciples. Join us as we worship, learn, and grow together in faith.</p>
                     
                     <div class="rotating-message">
@@ -1797,13 +1846,13 @@
                 
                 <!-- SERMONS TAB (tab 3) -->
                 <div class="content-section">
-                    <div class="section-title">📖 Sermons This Month (February)</div>
+                    <div class="section-title">📖 Sermons </div>
                     <div class="sermons-container">
     
                         <div class="sermon-card">
                             <div class="sermon-header active" onclick="toggleSermon(this)">
                                 <span class="toggle-icon">▼</span>
-                                <span class="sermon-date">📅 February 18th</span>
+                                <span class="sermon-date">📅 January 18th</span>
                                 <h3 class="sermon-title">An invitation to celebrate pt.1</h3>
                             </div>
                             <div class="sermon-content ">
@@ -1816,7 +1865,7 @@
                         <div class="sermon-card">
                             <div class="sermon-header " onclick="toggleSermon(this)">
                                 <span class="toggle-icon">▶</span>
-                                <span class="sermon-date">📅 February 25th</span>
+                                <span class="sermon-date">📅 January 25th</span>
                                 <h3 class="sermon-title">An invitation to celebrate pt.2 (Invitation, Participation, Rejoicing)</h3>
                             </div>
                             <div class="sermon-content collapsed">
@@ -1864,7 +1913,7 @@
                                 <div class="testimony-card">
                                     <div class="testimony-quote">❝</div>
                                     <div class="testimony-text">My mother faithfully did her best to teach me about Jesus. I actually understood in my early 20’s that God’s ways are better than my ways when I became a single mother.  I believe I was told by God Himself in my darkest moment,  “But Jesus forgives sin”.  Looking back, I think this was the point when I made Jesus my “Saviour”  because there was nothing I could do about my sin. It took another a few years, to learn and understand that God  redeems sin - past, present and future, and could and would work it for my good and His glory (Romans 8:28, Isaiah 61:1-4).  I was ALL in! I surrendered my life to Jesus to be used for His eternal purposes. I now know this is what it means to make Jesus my “Lord”.  The Lord was and continued to be faithful to His sanctifying work and establishing my identity as His daughter over the next 20 years. I continually sought to serve Him - my passion and sweet spot being facilitating ladies Bible study, sharing what I was learning. But, there was more. Around turning 50, God began to show me my need for His healing love that deepens and seals a trusting relationship with Him; no doubts and fears about His sovereignty over my life no matter the stormy circumstances. This is the place of true rest for my soul. There are not enough words to express my gratitude.</div>
-                                    <div class="testimony-author">— Sister Lee</div>
+                                    <div class="testimony-author">— Sister Bayne</div>
                                     <div class="testimony-date">Februrary 2026</div>
         
                                 </div>
@@ -1874,7 +1923,7 @@
                         <div class="share-cta">
                             <h3>💌 Share Your Story</h3>
                             <p>Has God moved in your life? Your testimony could encourage someone else.</p>
-                            <a href="mailto:gcbctt@gmail.com?subject=My Testimony" class="share-email">📧 gcbctt@gmail.com</a>
+                            <a href="mailto:greatcommissiontt@gmail.com?subject=My Testimony" class="share-email">📧 gcbctt@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -1888,7 +1937,6 @@
                             <div class="mission-header">
                                 <span class="mission-icon">🌍</span>
                                 <h3 class="mission-title">Bible translation</h3>
-                                <span class="mission-location">February 2026</span>
                             </div>
         
                             <div class="mission-message">"• 739,600 languages in the world <br> • 407,000 active projects <br> • 544 remaining no language <br> • and no projects for 36.8 million people"</div>
@@ -1962,7 +2010,7 @@
     
                         <div class="contact-item">
                             <div class="contact-label">Phone</div>
-                            <div class="contact-value">1-(868)-299-8281</div>
+                            <div class="contact-value">N/A</div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-label">Mail</div>
