@@ -44,6 +44,15 @@
             display: flex;
             overflow: hidden;
         }
+
+        /* Custom icon images */
+        .icon-image {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
         
         .tab-buttons {
             width: 80px;
@@ -1403,6 +1412,15 @@
                 order: 2;  
                 flex-direction: column;  
             }
+
+            /* Custom icon images */
+            .icon-image {
+                width: 32px;
+                height: 32px;
+                object-fit: contain;
+                display: block;
+                margin: 0 auto;
+            }
             
             /* Sidebar becomes horizontal at top of left container */
             .tab-buttons {
@@ -1684,45 +1702,65 @@
     <div class="container">
         <!-- LEFT: Content with tabs on the edge -->
         <div class="left-container">
-            <div class="tab-buttons">
+                        <div class="tab-buttons">
                 <button class="tab-button active" onclick="showTab(0)">
-                    <div class="tab-icon">🏠</div>
+                    <div class="tab-icon">
+                        <img src="icons/Home.png" alt="Home" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>H</span><span>O</span><span>M</span><span>E</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(1)">
-                    <div class="tab-icon">🎂</div>
+                    <div class="tab-icon">
+                        <img src="icons/Birthday.png" alt="Birthday" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>B</span><span>I</span><span>R</span><span>T</span><span>H</span><span>D</span><span>A</span><span>Y</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(2)">
-                    <div class="tab-icon">💍</div>
+                    <div class="tab-icon">
+                        <img src="icons/Anniversary.png" alt="Anniversary" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>A</span><span>N</span><span>N</span><span>I</span><span>V</span><span>E</span><span>R</span><span>S</span><span>A</span><span>R</span><span>Y</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(3)">  
-                    <div class="tab-icon">📖</div>
+                    <div class="tab-icon">
+                        <img src="icons/Sermons.png" alt="Sermons" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>S</span><span>E</span><span>R</span><span>M</span><span>O</span><span>N</span><span>S</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(4)">
-                    <div class="tab-icon">✨</div>
+                    <div class="tab-icon">
+                        <img src="icons/Inspire.png" alt="Inspire" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>I</span><span>N</span><span>S</span><span>P</span><span>I</span><span>R</span><span>E</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(5)">
-                    <div class="tab-icon">🌍</div>
+                    <div class="tab-icon">
+                        <img src="icons/Missions.png" alt="Missions" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>M</span><span>I</span><span>S</span><span>S</span><span>I</span><span>O</span><span>N</span><span>S</span></div>
                 </button>                                 
                 <button class="tab-button" onclick="showTab(6)">
-                    <div class="tab-icon">📅</div>
+                    <div class="tab-icon">
+                        <img src="icons/Events.png" alt="Events" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>E</span><span>V</span><span>E</span><span>N</span><span>T</span><span>S</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(7)">
-                    <div class="tab-icon">📢</div>
+                    <div class="tab-icon">
+                        <img src="icons/News.png" alt="News" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>N</span><span>E</span><span>W</span><span>S</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(8)">
-                    <div class="tab-icon">📞</div>
+                    <div class="tab-icon">
+                        <img src="icons/Contact.png" alt="Contact" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span></div>
                 </button>
                 <button class="tab-button" onclick="showTab(9)">
-                    <div class="tab-icon">ℹ️</div>
+                    <div class="tab-icon">
+                        <img src="icons/About-us.png" alt="About" class="icon-image">
+                    </div>
                     <div class="tab-text"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></div>
                 </button>
             </div>
