@@ -1694,7 +1694,22 @@
             .wisdom-footer {
                 flex-direction: column;
                 align-items: flex-start;
-            }            
+            }
+
+            .content-section.active {
+                padding-bottom: 60px;  /* Creates empty space at bottom */
+            }
+            
+            /* Ensure last items have margin */
+            .event-item:last-child,
+            .sermon-card:last-child,
+            .share-cta:last-child,
+            .testimony-section:last-child,
+            .mission-card:last-child,
+            .no-mission:last-child,
+            .support-section:last-child {
+                margin-bottom: 30px;
+            }                        
         }
     </style>
 </head>
