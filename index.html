@@ -1475,8 +1475,8 @@
                 min-height: 0;
                 background: #ecf0f1;
             }
-            
-            /* Horizontal tabs */
+
+            /* Horizontal tabs - SHORTER VERSION */
             .tab-buttons {
                 width: 100%;
                 flex: 0 0 auto;
@@ -1485,24 +1485,20 @@
                 overflow-x: auto;
                 overflow-y: hidden;
                 white-space: nowrap;
-                padding: 8px 12px;
-                gap: 8px;
+                padding: 5px 8px;           /* Reduced padding */
+                gap: 4px;                    /* Reduced gap */
                 background: linear-gradient(135deg, rgba(0, 229, 86), rgba(0, 120, 168));
                 -webkit-overflow-scrolling: touch;
-                min-height: 75px;
+                min-height: 55px;             /* Much shorter */
                 scrollbar-width: none;
-            }
-            
-            .tab-buttons::-webkit-scrollbar {
-                display: none;
             }
             
             .tab-button {
                 flex: 0 0 auto;
-                padding: 8px 10px;
-                min-width: 65px;
+                padding: 4px 6px;             /* Reduced padding */
+                min-width: 50px;               /* Smaller minimum width */
                 background: #2c3e50;
-                border-radius: 8px;
+                border-radius: 6px;             /* Slightly smaller radius */
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -1510,19 +1506,20 @@
             }
             
             .tab-icon {
-                margin-bottom: 4px;
+                margin-bottom: 2px;
             }
             
             .tab-icon img.icon-image {
-                width: 28px;
-                height: 28px;
+                width: 22px;                    /* Smaller icons */
+                height: 22px;
                 object-fit: contain;
             }
             
             .tab-text {
-                font-size: 9px;
+                font-size: 8px;                  /* Smaller text */
                 color: white;
                 text-align: center;
+                line-height: 1.2;
             }
             
             .tab-text span {
