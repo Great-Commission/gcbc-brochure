@@ -1383,7 +1383,7 @@
         }
 
         /* ============================================
-        RESPONSIVE DESIGN - MOBILE (UNIVERSAL FIX)
+        RESPONSIVE DESIGN - MOBILE (BALANCED FIX)
         ============================================ */
         @media (max-width: 768px) {
             .container {
@@ -1392,22 +1392,22 @@
                 overflow: hidden;
             }
             
-    /* ========== RIGHT CONTAINER (TOP) - FIXED ========== */
+            /* ========== RIGHT CONTAINER (TOP) - BIGGER LOGO ========== */
             .right-container {
                 width: 100%;
                 height: auto;
-                min-height: 90px;        /* Slightly taller */
-                max-height: 110px;        /* Slightly taller */
+                min-height: 110px;        /* Increased for bigger logo */
+                max-height: 130px;         /* Increased for bigger logo */
                 order: 1;
-                padding: 8px 10px 5px 10px;
+                padding: 10px 15px 5px 15px;
                 justify-content: center;
-                overflow: visible;        /* Changed from hidden */
+                overflow: visible;
                 flex-shrink: 0;
+                background: linear-gradient(135deg, rgba(0, 229, 86, 0.9), rgba(0, 120, 168, 0.9));
             }
             
             .church-header {
                 margin-bottom: 0;
-                /* transform: scale(0.9);  ← REMOVED or COMMENTED OUT */
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -1418,38 +1418,53 @@
             
             .church-logo {
                 margin: 0 auto 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             
             .church-logo img {
-                max-width: 70px;           /* Slightly bigger */
+                max-width: 100px;           /* Bigger logo */
                 width: auto;
-                max-height: 45px;
+                max-height: 60px;            /* Bigger logo */
                 object-fit: contain;
+                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
             }
             
             .church-name {
-                font-size: 16px;            /* Slightly bigger */
-                margin-bottom: 2px;
+                font-size: 20px;             /* Bigger text */
+                font-weight: bold;
+                margin-bottom: 3px;
                 line-height: 1.2;
-                white-space: nowrap;        /* Prevents wrapping */
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 90%;
-            }
-            
-            .church-tagline {
-                font-size: 10px;            /* Slightly bigger */
-                line-height: 1.2;
+                text-align: center;
+                width: 100%;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                max-width: 90%;
+                padding: 0 5px;
             }
             
-            /* ========== LEFT CONTAINER (BOTTOM) ========== */
+            .church-tagline {
+                font-size: 12px;             /* Bigger text */
+                opacity: 0.95;
+                text-align: center;
+                width: 100%;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding: 0 5px;
+            }
+            
+            .slideshow-image.active {
+                opacity: 0.3;
+            }
+            
+            /* ========== LEFT CONTAINER (BOTTOM) - ADJUSTED ========== */
             .left-container {
                 width: 100%;
-                height: calc(100vh - 90px);  /* Viewport minus top container */
+                height: calc(100vh - 130px);  /* Adjusted for bigger logo area */
                 order: 2;
                 flex-direction: column;
                 overflow: hidden;
@@ -1498,22 +1513,43 @@
                 margin: 0 1px;
             }
             
-            /* ========== CONTENT AREA - FLEXIBLE ========== */
+            /* ========== CONTENT AREA - EXTRA BOTTOM SPACE ========== */
             .content-area {
                 width: 100%;
-                flex: 1;                    /* Takes remaining space */
-                height: auto;               /* Let flex decide */
-                padding: 15px 15px 30px 15px;
+                flex: 1;
+                height: auto;
+                padding: 15px 15px 60px 15px;  /* Increased bottom padding */
                 overflow-y: auto !important;
                 -webkit-overflow-scrolling: touch;
             }
             
-            /* Dynamic bottom padding based on content */
+            /* Extra invisible space at the very bottom */
             .content-area::after {
                 content: "";
                 display: block;
-                height: 20px;
+                height: 30px;                  /* Increased spacer */
                 width: 100%;
+            }
+            
+            /* ========== HOME TAB - MAXIMUM BOTTOM SPACE ========== */
+            .welcome-text {
+                margin-bottom: 20px;
+            }
+            
+            .rotating-message {
+                margin-bottom: 25px;
+                padding: 20px 12px;
+                min-height: 150px;
+            }
+            
+            .wisdom-card {
+                margin-bottom: 30px;
+                padding: 20px;
+            }
+            
+            /* Extra margin for last elements in home tab */
+            .content-section.active .wisdom-card:last-child {
+                margin-bottom: 70px !important;  /* Extra space at bottom */
             }
             
             /* ========== SECTION TITLES ========== */
@@ -1531,27 +1567,6 @@
                 padding: 3px 10px;
             }
             
-            /* ========== HOME TAB SPECIFIC ========== */
-            .welcome-text {
-                margin-bottom: 15px;
-            }
-            
-            .rotating-message {
-                margin-bottom: 15px;
-                padding: 20px 12px;
-                min-height: 150px;
-            }
-            
-            .wisdom-card {
-                margin-bottom: 25px;
-                padding: 20px;
-            }
-            
-            /* Extra margin for last elements in home tab */
-            .content-section.active .wisdom-card:last-child {
-                margin-bottom: 40px;
-            }
-            
             /* ========== GENERAL CARD STYLES ========== */
             .event-item,
             .sermon-card,
@@ -1559,12 +1574,12 @@
             .testimony-section,
             .mission-card,
             .video-section {
-                margin-bottom: 12px;
+                margin-bottom: 15px;
             }
             
-            /* Last item in ANY tab gets extra space */
+            /* Last item in ANY tab gets LOTS of space */
             .content-section.active > *:last-child {
-                margin-bottom: 50px !important;
+                margin-bottom: 70px !important;
             }
             
             /* ========== ROTATING MESSAGES ========== */
