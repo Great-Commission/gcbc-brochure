@@ -1383,307 +1383,346 @@
         }
 
         /* ============================================
-            RESPONSIVE DESIGN - MOBILE
+        RESPONSIVE DESIGN - MOBILE (FINAL FIX)
         ============================================ */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                height 100vh;
+                height: 100vh;
                 overflow: hidden;
             }
             
-            /* Right container (Church Info) moves to TOP */
+            /* ========== TOP SECTION - CHURCH INFO (COMPACT) ========== */
             .right-container {
                 width: 100%;
-                height: auto; 
-                min-height: 18vh; 
-                max-height: 20vh;  
-                order: 1;  /* Makes it appear first */
-                padding: 15px;
-                justify-content: center;
-            }
-            
-            /* Left container (Sidebar + Content) moves to BOTTOM */
-            .left-container {
-                width: 100%;
-                height: 82vh;  
-                order: 2;  
-                flex-direction: column;  
-            }
-            
-            /* Sidebar becomes horizontal at top of left container */
-            .tab-buttons {
-                width: 100%;
                 height: auto;
-                min-height: 70px;
-                flex-direction: row;
-                justify-content: space-around;
-                padding: 8px 5px;
-                position: sticky;
-                top: 0;
-                overflow-x: auto;
-                overflow-y: hidden;
-                white-space: nowrap;
-                gap: 3px;
+                min-height: 90px;
+                max-height: 100px;
                 order: 1;
+                padding: 5px 15px 3px 15px;
+                justify-content: center;
                 flex-shrink: 0;
+                margin: 0;
             }
             
-            .tab-button {
-                padding: 6px 4px;
-                margin: 0 1px;
-                min-width: 55px;
-            }
-            
-            .tab-icon {
-                font-size: 16px;
-                margin-bottom: 2px;
-            }
-
-            .tab-icon img.icon-image {
-                width: 20px;
-                height: 20px;
-            }
-            
-            .tab-text {
-                font-size: 8px;
-            }
-            
-            .tab-text span {
-                display: inline-block;  
-                margin: 0 1px;
-            }
-            
-            /* Content area below horizontal sidebar */
-            .content-area {
-                width: 100%;
-                height: calc(82vh - 60px);  
-                padding: 15px;
-                overflow-y: auto !important;
-                order: 2;
-                flex: 1;
-            }
-
-            .content-section.active {
-                padding-bottom: 30px;  /* Extra space at bottom */
-            }
-
-            .share-cta, 
-            .support-section,
-            .no-mission,
-            .event-item:last-child,
-            .sermon-card:last-child {
-                margin-bottom: 20px;  /* Space at bottom */
-            }                        
-            
-            /* Church logo adjustments for mobile top */
             .church-header {
                 margin-bottom: 0;
+                padding: 0;
             }
             
             .church-logo {
-                margin: 0 auto 5px;
+                margin: 0 auto 3px;
             }
             
             .church-logo img {
-                max-width: 80px;
+                max-width: 75px;
                 width: auto;
-                max-height: 6vh;
+                height: auto;
+                max-height: 45px;
             }
             
             .church-name {
                 font-size: 16px;
-                margin-bottom: 2px;
+                margin-bottom: 1px;
                 line-height: 1.2;
             }
             
             .church-tagline {
                 font-size: 10px;
+                line-height: 1.2;
             }
             
-            /* Slideshow adjustments for mobile */
             .slideshow-image.active {
-                opacity: 0.3;  
+                opacity: 0.3;
             }
-
+            
+            /* ========== BOTTOM SECTION - TABS + CONTENT ========== */
+            .left-container {
+                width: 100%;
+                flex: 1;
+                order: 2;
+                flex-direction: column;
+                overflow: hidden;
+                min-height: 0;
+                margin-top: 0;
+            }
+            
+            /* ========== HORIZONTAL TABS - FIXED ========== */
+            .tab-buttons {
+                width: 100%;
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                padding: 8px 12px;
+                gap: 8px;
+                background: linear-gradient(135deg, rgba(0, 229, 86), rgba(0, 120, 168));
+                -webkit-overflow-scrolling: touch;
+                min-height: 80px;
+                max-height: 85px;
+                align-items: center;
+                margin: 0;
+            }
+            
+            .tab-button {
+                padding: 8px 8px;
+                min-width: 70px;
+                height: 70px;
+                background: #2c3e50;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+            
+            .tab-icon {
+                margin-bottom: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .tab-icon img.icon-image {
+                width: 28px;
+                height: 28px;
+                object-fit: contain;
+            }
+            
+            .tab-text {
+                font-size: 9px;
+                line-height: 1.2;
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+            }
+            
+            .tab-text span {
+                display: inline-block;
+                margin: 0;
+                line-height: 1.2;
+            }
+            
+            /* ========== CONTENT AREA ========== */
+            .content-area {
+                width: 100%;
+                flex: 1;
+                overflow-y: auto !important;
+                padding: 15px 15px 70px 15px;
+                background: white;
+                -webkit-overflow-scrolling: touch;
+                margin: 0;
+            }
+            
+            .content-area::after {
+                content: "";
+                display: block;
+                height: 40px;
+                width: 100%;
+                flex-shrink: 0;
+            }
+            
+            .content-section.active > *:last-child {
+                margin-bottom: 30px !important;
+            }
+            
+            /* ========== HOME TAB ========== */
+            .welcome-text {
+                margin-bottom: 15px;
+                font-size: 15px;
+            }
+            
+            .rotating-message {
+                margin-bottom: 20px;
+                min-height: 140px;
+                padding: 15px;
+            }
+            
+            .wisdom-card {
+                margin-bottom: 25px;
+                padding: 15px;
+            }
+            
+            .message-title {
+                font-size: 18px;
+            }
+            
+            .message-text {
+                font-size: 14px;
+            }
+            
+            /* ========== SECTION TITLES ========== */
             .section-title {
-                font-size: 22px;
+                font-size: 20px;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 8px;
-                margin-bottom: 20px;
+                gap: 5px;
+                padding-bottom: 8px;
+                margin-bottom: 15px;
             }
             
             .date-badge {
-                font-size: 12px;
-                padding: 3px 10px;
+                font-size: 11px;
+                padding: 3px 8px;
             }
-
+            
+            /* ========== CARD STYLES ========== */
             .event-item,
             .sermon-card,
             .verse-card,
             .testimony-section,
             .mission-card,
             .video-section {
-                margin-bottom: 15px;
-            }
-
-            .share-email,
-            .video-link,
-            .support-email {
-                padding: 10px 20px;
-                font-size: 14px;
-            }                           
-
-            /*Inspire Tab for mobile */
-            .verse-text {
-                font-size: 22px;
+                margin-bottom: 12px;
             }
             
-            .verse-card {
-                padding: 25px;
-            }
-            
-            .testimony-scrollbox {
-                max-height: 200px;
-            }
-            
-            .testimony-card {
-                padding: 15px;
-            }
-            
-            .share-cta h3 {
-                font-size: 20px;
-            }
-            
-            /* Sermon card adjustments */
-            .sermon-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-                padding: 15px;
-            }
-            
-            .sermon-title {
-                font-size: 18px;
-            }
-            
-            .sermon-date {
-                font-size: 14px;
-                padding: 5px 12px;
-            }
-            
-            .sermon-content {
-                padding: 15px;
-            }
-            
-            .sermon-scripture {
-                font-size: 14px;
-                padding: 6px 14px;
-            }
-            
-            .sermon-summary {
-                font-size: 14px;
+            .event-item {
                 padding: 12px;
             }
             
-            .key-points-title {
-                font-size: 16px;
-            }
-            
-            .key-points-list li {
-                font-size: 14px;
-                padding: 6px 0 6px 22px;
-            }
-
-             .mission-title {
-                font-size: 20px;
-            }
-            
-            .mission-message {
-                font-size: 16px;
-                padding: 15px;
-            }
-            
-            .video-container {
-                padding: 25px 15px;
-            }
-            
-            .no-mission {
-                padding: 30px 20px;
-            }
-            
-            .no-mission span {
-                font-size: 40px;
-            }
-            
-            /* Event items adjustments */
-            .event-item {
-                padding: 15px;
-            }
-            
             .event-title {
-                font-size: 18px;
+                font-size: 17px;
             }
             
             .event-detail {
-                font-size: 14px;
+                font-size: 13px;
             }
             
-            /* Contact grid adjustments */
+            /* ========== SERMONS ========== */
+            .sermon-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+                padding: 12px;
+            }
+            
+            .sermon-title {
+                font-size: 17px;
+            }
+            
+            .sermon-date {
+                font-size: 13px;
+                padding: 4px 10px;
+            }
+            
+            .sermon-content {
+                padding: 12px;
+            }
+            
+            .sermon-scripture {
+                font-size: 13px;
+                padding: 5px 12px;
+            }
+            
+            .sermon-summary {
+                font-size: 13px;
+                padding: 10px;
+            }
+            
+            .key-points-title {
+                font-size: 15px;
+            }
+            
+            .key-points-list li {
+                font-size: 13px;
+                padding: 5px 0 5px 20px;
+            }
+            
+            /* ========== INSPIRE ========== */
+            .verse-text {
+                font-size: 20px;
+            }
+            
+            .verse-card {
+                padding: 18px;
+            }
+            
+            .testimony-scrollbox {
+                max-height: 180px;
+            }
+            
+            .testimony-card {
+                padding: 12px;
+            }
+            
+            .share-cta {
+                padding: 18px;
+            }
+            
+            .share-cta h3 {
+                font-size: 18px;
+            }
+            
+            /* ========== MISSIONS ========== */
+            .mission-title {
+                font-size: 18px;
+            }
+            
+            .mission-message {
+                font-size: 15px;
+                padding: 12px;
+            }
+            
+            .video-container {
+                padding: 20px 12px;
+            }
+            
+            .no-mission {
+                padding: 25px 15px;
+            }
+            
+            /* ========== CONTACT ========== */
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 12px;
             }
             
-            /* Section title adjustments */
-            .section-title {
-                font-size: 24px;
-                padding-bottom: 10px;
-                margin-bottom: 20px;
+            .contact-item {
+                padding: 12px;
             }
             
-            /* Rotating message adjustments */
-            .rotating-message {
-                padding: 25px;
-                min-height: 150px;
+            /* ========== ANNOUNCEMENTS ========== */
+            .announcement-item {
+                padding: 10px;
+                font-size: 13px;
             }
             
-            .message-title {
-                font-size: 22px;
+            /* ========== BUTTONS ========== */
+            .share-email,
+            .video-link,
+            .support-email {
+                padding: 10px 18px;
+                font-size: 14px;
+                min-width: 160px;
             }
             
-            .message-text {
-                font-size: 16px;
-            }
-
-            /* Infromation for mobile */
+            /* ========== WISDOM ========== */
             .wisdom-card {
-                padding: 20px;
+                padding: 18px;
             }
             
             .wisdom-title {
-                font-size: 22px;
+                font-size: 20px;
             }
             
             .wisdom-tip-text {
-                font-size: 16px;
-                padding: 15px;
+                font-size: 15px;
+                padding: 12px;
             }
             
             .wisdom-steps li {
-                font-size: 15px;
-                padding: 8px 0 8px 32px;
-            }
-            
-            .wisdom-verse-text {
-                font-size: 15px;
+                font-size: 14px;
+                padding: 6px 0 6px 30px;
             }
             
             .wisdom-footer {
                 flex-direction: column;
                 align-items: flex-start;
-            }            
+                gap: 5px;
+            }
         }
     </style>
 </head>
