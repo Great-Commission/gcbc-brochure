@@ -1394,51 +1394,52 @@
                 overflow: hidden;
             }
             
-            /* Right container (Church Info) at TOP */
+            /* Right container (Church Info) at TOP - REDUCED HEIGHT */
             .right-container {
                 width: 100%;
                 height: auto;
-                min-height: 18vh;
-                max-height: 22vh;
+                min-height: 15vh;  /* Reduced from 18vh */
+                max-height: 18vh;   /* Reduced from 22vh */
                 order: 1;
-                padding: 10px 15px;
+                padding: 8px 15px 5px 15px;  /* Reduced padding */
                 justify-content: center;
                 overflow: hidden;
             }
             
-            /* Church logo adjustments */
+            /* Church logo adjustments - SMALLER */
             .church-header {
                 margin-bottom: 0;
             }
             
             .church-logo {
-                margin: 0 auto 5px;
+                margin: 0 auto 3px;  /* Reduced from 5px */
             }
             
             .church-logo img {
-                max-width: 100px;
+                max-width: 70px;     /* Reduced from 100px */
                 width: auto;
-                max-height: 8vh;
+                max-height: 6vh;      /* Reduced from 8vh */
             }
             
             .church-name {
-                font-size: 18px;
-                margin-bottom: 2px;
+                font-size: 16px;      /* Reduced from 18px */
+                margin-bottom: 1px;
                 line-height: 1.2;
             }
             
             .church-tagline {
-                font-size: 12px;
+                font-size: 10px;      /* Reduced from 12px */
+                line-height: 1.2;
             }
             
             .slideshow-image.active {
                 opacity: 0.3;
             }
             
-            /* Left container (Sidebar + Content) */
+            /* Left container (Sidebar + Content) - INCREASED HEIGHT */
             .left-container {
                 width: 100%;
-                height: 82vh;
+                height: 85vh;          /* Increased from 82vh */
                 order: 2;
                 flex-direction: column;
                 overflow: hidden;
@@ -1448,11 +1449,11 @@
             .tab-buttons {
                 width: 100%;
                 height: auto;
-                min-height: 70px;
+                min-height: 65px;      /* Slightly reduced */
                 flex-direction: row;
                 justify-content: flex-start;
-                padding: 8px 10px;
-                gap: 8px;
+                padding: 5px 8px;      /* Reduced padding */
+                gap: 5px;
                 position: sticky;
                 top: 0;
                 overflow-x: auto;
@@ -1464,24 +1465,24 @@
             }
             
             .tab-button {
-                padding: 8px 8px;
-                margin: 0 2px;
-                min-width: 60px;
+                padding: 6px 6px;      /* Reduced padding */
+                margin: 0 1px;
+                min-width: 55px;       /* Slightly reduced */
                 flex-shrink: 0;
             }
             
             .tab-icon {
-                font-size: 16px;
-                margin-bottom: 4px;
+                font-size: 14px;       /* Reduced */
+                margin-bottom: 2px;
             }
             
             .tab-icon img.icon-image {
-                width: 28px;
-                height: 28px;
+                width: 24px;           /* Reduced from 28px */
+                height: 24px;
             }
             
             .tab-text {
-                font-size: 10px;
+                font-size: 9px;        /* Reduced */
             }
             
             .tab-text span {
@@ -1489,16 +1490,17 @@
                 margin: 0 1px;
             }
             
-            /* Content area - SCROLLABLE with EXTRA BOTTOM SPACE */
+            /* Content area - ADJUST HEIGHT */
             .content-area {
                 width: 100%;
-                height: calc(82vh - 70px);
-                padding: 20px 20px 100px 20px;
+                height: calc(85vh - 65px);  /* Adjusted for new values */
+                padding: 15px 15px 100px 15px;
                 overflow-y: auto !important;
                 order: 2;
                 flex: 1;
                 -webkit-overflow-scrolling: touch;
             }
+
             
             /* Extra invisible space at the very bottom */
             .content-area::after {
