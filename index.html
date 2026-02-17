@@ -1548,6 +1548,40 @@
             .wisdom-card:last-child {
                 margin-bottom: 30px;
             }
+
+            /* ========== HOME TAB SPECIFIC FIXES ========== */
+            .content-section.active .welcome-text {
+                margin-bottom: 20px;
+            }
+            
+            .content-section.active .rotating-message {
+                margin-bottom: 25px;
+            }
+            
+            .content-section.active .wisdom-card {
+                margin-bottom: 30px;
+            }
+            
+            /* Ensure home tab has extra bottom padding */
+            .content-section.active:first-child {
+                padding-bottom: 40px;
+            }
+            
+            /* Force home tab to have more space */
+            .content-section.active[style*="display: block"] {
+                min-height: 100%;
+                display: flex !important;
+                flex-direction: column;
+            }
+            
+            /* Make home tab content take full height with space at bottom */
+            .content-section.active .sermons-container,
+            .content-section.active .inspire-container,
+            .content-section.active .missions-container,
+            .content-section.active .event-item:last-child,
+            .content-section.active .wisdom-card:last-child {
+                margin-bottom: 50px;
+            }
             
             /* ========== ROTATING MESSAGES ========== */
             .rotating-message {
