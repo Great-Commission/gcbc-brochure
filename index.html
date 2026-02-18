@@ -43,6 +43,7 @@
             background: #ecf0f1;
             display: flex;
             overflow: hidden;
+            order: 1;  /* Show first on desktop (source has it second) */
         }
 
         /* Custom icon images */
@@ -1088,6 +1089,7 @@
             align-items: center;
             justify-content: center;
             padding: 40px;
+            order: 2;  /* Show second on desktop (source has it first) */
         }
 
         /* Slideshow Background */
@@ -1407,7 +1409,6 @@
                 height: auto !important;
                 min-height: 160px;
                 max-height: none !important;   /* Never clip the logo */
-                order: 1 !important;
                 flex-shrink: 0;
                 padding: 20px 15px;
                 display: flex;
@@ -1455,7 +1456,6 @@
             .left-container {
                 width: 100%;
                 height: auto !important;
-                order: 2 !important;
                 display: flex;
                 flex-direction: column;
                 overflow: visible !important;
@@ -1748,7 +1748,59 @@
 </head>
 <body>
     <div class="container">
-        <!-- LEFT: Content with tabs on the edge -->
+        <!-- RIGHT: Church Info with Slideshow Background -->
+        <div class="right-container">
+            <!-- Slideshow Background -->
+            <div class="slideshow-background">
+    
+                <img src="slideshow_folder/17b8d4a9-207a-4b3b-901f-449ca22ed561-copied-media~2.jpg" class="slideshow-image active" alt="Slideshow Image 1">
+            
+                <img src="slideshow_folder/9c6b2395-afe0-4fb8-aa47-8810d2aa36d7-copied-media~2.jpg" class="slideshow-image " alt="Slideshow Image 2">
+            
+                <img src="slideshow_folder/IMG-20250401-WA0003.jpg" class="slideshow-image " alt="Slideshow Image 3">
+            
+                <img src="slideshow_folder/IMG-20251221-WA0014.jpg" class="slideshow-image " alt="Slideshow Image 4">
+            
+                <img src="slideshow_folder/IMG-20251228-WA0059.jpg" class="slideshow-image " alt="Slideshow Image 5">
+            
+                <img src="slideshow_folder/IMG-20251228-WA0067.jpg" class="slideshow-image " alt="Slideshow Image 6">
+            
+                <img src="slideshow_folder/IMG-20251228-WA0069.jpg" class="slideshow-image " alt="Slideshow Image 7">
+            
+                <img src="slideshow_folder/IMG-20251228-WA0070.jpg" class="slideshow-image " alt="Slideshow Image 8">
+            
+                <img src="slideshow_folder/IMG-20251228-WA0079.jpg" class="slideshow-image " alt="Slideshow Image 9">
+            
+                <img src="slideshow_folder/IMG-20251228-WA0089.jpg" class="slideshow-image " alt="Slideshow Image 10">
+            
+                <img src="slideshow_folder/PXL_20251025_022455130.jpg" class="slideshow-image " alt="Slideshow Image 11">
+            
+                <img src="slideshow_folder/PXL_20251026_044849528.jpg" class="slideshow-image " alt="Slideshow Image 12">
+            
+                <img src="slideshow_folder/PXL_20251026_151057448.jpg" class="slideshow-image " alt="Slideshow Image 13">
+            
+                <img src="slideshow_folder/PXL_20251221_153222245.jpg" class="slideshow-image " alt="Slideshow Image 14">
+            
+                <img src="slideshow_folder/PXL_20251221_153300936.jpg" class="slideshow-image " alt="Slideshow Image 15">
+            
+                <img src="slideshow_folder/PXL_20251221_153356958.jpg" class="slideshow-image " alt="Slideshow Image 16">
+            
+            </div>
+            
+            <!-- Semi-transparent overlay -->
+            <div class="slideshow-overlay"></div>
+            
+            <!-- Church Info (on top of slideshow) -->
+            <div class="church-header">
+                <div class="church-logo">
+                    <img src="Images/GCBC LOGO Transparent.png" alt="Church Logo"> 
+                </div>
+                <div class="church-name">Great Commission Bible Church</div>
+                <div class="church-tagline">Welcome to Great Commission Bible Church</div>
+            </div>
+        </div>
+        
+<!-- LEFT: Content with tabs on the edge -->
         <div class="left-container">
                         <div class="tab-buttons">
                 <button class="tab-button active" onclick="showTab(0)">
@@ -2144,58 +2196,6 @@
                         <div class="about-text">Shannon Fancis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno</div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- RIGHT: Church Info with Slideshow Background -->
-        <div class="right-container">
-            <!-- Slideshow Background -->
-            <div class="slideshow-background">
-    
-                <img src="slideshow_folder/17b8d4a9-207a-4b3b-901f-449ca22ed561-copied-media~2.jpg" class="slideshow-image active" alt="Slideshow Image 1">
-            
-                <img src="slideshow_folder/9c6b2395-afe0-4fb8-aa47-8810d2aa36d7-copied-media~2.jpg" class="slideshow-image " alt="Slideshow Image 2">
-            
-                <img src="slideshow_folder/IMG-20250401-WA0003.jpg" class="slideshow-image " alt="Slideshow Image 3">
-            
-                <img src="slideshow_folder/IMG-20251221-WA0014.jpg" class="slideshow-image " alt="Slideshow Image 4">
-            
-                <img src="slideshow_folder/IMG-20251228-WA0059.jpg" class="slideshow-image " alt="Slideshow Image 5">
-            
-                <img src="slideshow_folder/IMG-20251228-WA0067.jpg" class="slideshow-image " alt="Slideshow Image 6">
-            
-                <img src="slideshow_folder/IMG-20251228-WA0069.jpg" class="slideshow-image " alt="Slideshow Image 7">
-            
-                <img src="slideshow_folder/IMG-20251228-WA0070.jpg" class="slideshow-image " alt="Slideshow Image 8">
-            
-                <img src="slideshow_folder/IMG-20251228-WA0079.jpg" class="slideshow-image " alt="Slideshow Image 9">
-            
-                <img src="slideshow_folder/IMG-20251228-WA0089.jpg" class="slideshow-image " alt="Slideshow Image 10">
-            
-                <img src="slideshow_folder/PXL_20251025_022455130.jpg" class="slideshow-image " alt="Slideshow Image 11">
-            
-                <img src="slideshow_folder/PXL_20251026_044849528.jpg" class="slideshow-image " alt="Slideshow Image 12">
-            
-                <img src="slideshow_folder/PXL_20251026_151057448.jpg" class="slideshow-image " alt="Slideshow Image 13">
-            
-                <img src="slideshow_folder/PXL_20251221_153222245.jpg" class="slideshow-image " alt="Slideshow Image 14">
-            
-                <img src="slideshow_folder/PXL_20251221_153300936.jpg" class="slideshow-image " alt="Slideshow Image 15">
-            
-                <img src="slideshow_folder/PXL_20251221_153356958.jpg" class="slideshow-image " alt="Slideshow Image 16">
-            
-            </div>
-            
-            <!-- Semi-transparent overlay -->
-            <div class="slideshow-overlay"></div>
-            
-            <!-- Church Info (on top of slideshow) -->
-            <div class="church-header">
-                <div class="church-logo">
-                    <img src="Images/GCBC LOGO Transparent.png" alt="Church Logo"> 
-                </div>
-                <div class="church-name">Great Commission Bible Church</div>
-                <div class="church-tagline">Welcome to Great Commission Bible Church</div>
             </div>
         </div>
     </div>
