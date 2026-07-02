@@ -88,29 +88,30 @@ def deploy():
          "deploy.py"
     ])
 
-    # Check if there's anything new to commit
-    status = subprocess.run(
+    # Commit only if something changed since last commit
+    staged = subprocess.run(
         ["git", "diff", "--cached", "--quiet"],
         cwd=SCRIPT_DIR, capture_output=True
     )
-    if status.returncode == 0:
-        print("\n  Nothing has changed since the last upload — already up to date.")
-        return
+    if staged.returncode != 0:
+        print("\nStep 3 — Committing ...")
+        timestamp = datetime.now().strftime("%d %b %Y, %I:%M %p")
+        message = f"{COMMIT_PREFIX} — {timestamp}"
+        run(["git", "commit", "-m", message])
+    else:
+        print("\n  No file changes — skipping commit.")
 
-    print("\nStep 3 — Committing ...")
-    timestamp = datetime.now().strftime("%d %b %Y, %I:%M %p")
-    message = f"{COMMIT_PREFIX} — {timestamp}"
-    run(["git", "commit", "-m", message])
-
+    # Always push in case a previous push failed
     print("\nStep 4 — Pushing to GitHub ...")
-    # Try a normal push first; if it fails (e.g. fresh repo), force-push with upstream set
     result = subprocess.run(
-        ["git", "push", "origin", BRANCH],
+        ["git", "push", "--set-upstream", "origin", BRANCH],
         cwd=SCRIPT_DIR, capture_output=True, text=True
     )
     if result.returncode != 0:
-        print("  Normal push failed — trying to set upstream and push...")
-        run(["git", "push", "--set-upstream", "origin", BRANCH])
+        # Remote has unrelated history (e.g. first push from a new machine).
+        # Force-push so our local version becomes the live version.
+        print("  Remote has different history — force-pushing to overwrite...")
+        run(["git", "push", "--force", "--set-upstream", "origin", BRANCH])
     else:
         if result.stdout.strip():
             print(f"  {result.stdout.strip()}")
