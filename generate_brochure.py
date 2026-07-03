@@ -23,10 +23,10 @@ def generate_html():
 
     if TEST_MONTH:
         current_month = TEST_MONTH
-        current_date = f"01 {TEST_MONTH}, {datetime.now().year}  [TEST]"
+        current_date = f"{TEST_MONTH} {datetime.now().year}  [TEST]"
     else:
         current_month = datetime.now().strftime('%B')
-        current_date = datetime.now().strftime('%d %B, %Y')
+        current_date = datetime.now().strftime('%B %Y')
 
     
     # Helper function to split text into vertical letters
@@ -649,6 +649,10 @@ def generate_html():
         .event-item:hover {{
             transform: translateX(5px);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }}
+
+        .event-item--permanent {{
+            border-left-color: #e74c3c;
         }}
         
         .event-title {{
@@ -1452,6 +1456,52 @@ def generate_html():
             font-size: 16px;
         }}
 
+        /* Did You Know mini-card */
+        .did-you-know {{
+            background: rgba(0, 229, 86, 0.07);
+            border-radius: 14px;
+            padding: 18px 22px;
+            border-left: 5px solid rgba(0, 229, 86);
+            margin-top: 16px;
+        }}
+
+        .did-you-know-header {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }}
+
+        .did-you-know ul {{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }}
+
+        .did-you-know li {{
+            font-size: 15px;
+            color: #444;
+            padding: 8px 0 8px 24px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 229, 86, 0.2);
+            line-height: 1.5;
+        }}
+
+        .did-you-know li:last-child {{
+            border-bottom: none;
+        }}
+
+        .did-you-know li::before {{
+            content: "?";
+            position: absolute;
+            left: 2px;
+            font-weight: bold;
+            color: rgba(0, 180, 70);
+        }}
+
         /* ============================================
         RESPONSIVE DESIGN - MOBILE
         ============================================ */
@@ -1916,20 +1966,23 @@ def generate_html():
 
     # Check if we have a real tip (not empty dict and has a title)
     if current_wisdom and isinstance(current_wisdom, dict) and current_wisdom.get('title'):
+        tip = current_wisdom.get('tip', '')
+        tip_html = f'<div class="wisdom-tip-text">{tip}</div>' if tip else ''
+        steps_label = current_wisdom.get('steps_label', 'Quick Steps')  # override per month in JSON
         html_parts.append(f"""
                     <div class="wisdom-card">
                         <div class="wisdom-header">
                             <span class="wisdom-month-badge">💡 {current_month} Wisdom Tip</span>
                         </div>
                         <h3 class="wisdom-title">{current_wisdom.get('title', '')}</h3>
-                        <div class="wisdom-tip-text">{current_wisdom.get('tip', '')}</div>
+                        {tip_html}
         """)
-        
+
         # Add steps if they exist
         steps = current_wisdom.get('steps', [])
         if steps:
             html_parts.append(f"""
-                        <div class="wisdom-steps-title">📋 Quick Steps:</div>
+                        <div class="wisdom-steps-title">📋 {steps_label}:</div>
                         <ul class="wisdom-steps">
             """)
             for step in steps:
@@ -1939,7 +1992,7 @@ def generate_html():
             html_parts.append("""
                         </ul>
         """)
-        
+
         # Add verse if it exists
         verse = current_wisdom.get('verse', '')
         verse_text = current_wisdom.get('verse_text', '')
@@ -1950,13 +2003,21 @@ def generate_html():
                             <div class="wisdom-verse-ref">— {verse}</div>
                         </div>
         """)
-        
-        # Footer with theme and author
-        html_parts.append(f"""
+
+        # Footer — only render if at least one field has content
+        theme = current_wisdom.get('theme', '')
+        author = current_wisdom.get('author', '')
+        if theme or author:
+            theme_html = f'<span class="wisdom-theme">🏷️ {theme}</span>' if theme else ''
+            author_html = f'<span class="wisdom-author">{author}</span>' if author else ''
+            html_parts.append(f"""
                         <div class="wisdom-footer">
-                            <span class="wisdom-theme">🏷️ {current_wisdom.get('theme', 'General')}</span>
-                            <span class="wisdom-author">{current_wisdom.get('author', 'GCBC')}</span>
+                            {theme_html}
+                            {author_html}
                         </div>
+        """)
+
+        html_parts.append("""
                     </div>
         """)
     else:
@@ -1965,6 +2026,23 @@ def generate_html():
                     <div class="no-wisdom">
                         <span>💭</span>
                         <p>Check back next month for a new wisdom tip!</p>
+                    </div>
+        """)
+
+    # Did You Know — only renders if data exists for the month
+    did_you_know = current_wisdom.get('did_you_know', []) if current_wisdom else []
+    if did_you_know:
+        html_parts.append("""
+                    <div class="did-you-know">
+                        <div class="did-you-know-header">📚 Did You Know?</div>
+                        <ul>
+        """)
+        for fact in did_you_know:
+            html_parts.append(f"""
+                            <li>{fact}</li>
+            """)
+        html_parts.append("""
+                        </ul>
                     </div>
         """)
 
@@ -2072,9 +2150,13 @@ def generate_html():
                                 <h3 class="sermon-title">{sermon.get('title', 'Sermon')}</h3>
                             </div>
                             <div class="sermon-content {content_class}">
-                                <div class="sermon-scripture">📖 {sermon.get('scripture', '')}</div>
-                                <div class="sermon-summary">{sermon.get('summary', '')}</div>
             """)
+            scripture = sermon.get('scripture', '')
+            summary = sermon.get('summary', '')
+            if scripture:
+                html_parts.append(f'<div class="sermon-scripture">📖 {scripture}</div>')
+            if summary:
+                html_parts.append(f'<div class="sermon-summary">{summary}</div>')
             
             # Add key points
             key_points = sermon.get('key_points', [])
@@ -2120,12 +2202,14 @@ def generate_html():
     verse_data = current_inspire.get('verse_of_the_month', {})
     
     if verse_data and isinstance(verse_data, dict) and verse_data.get('verse') and verse_data.get('text'):
+        verse_theme = verse_data.get('theme', '')
+        verse_theme_html = f'<span class="verse-theme">🎯 {verse_theme}</span>' if verse_theme else ''
         html_parts.append(f"""
                         <div class="verse-card">
                             <div class="verse-icon">📖</div>
                             <div class="verse-text">"{verse_data.get('text', '')}"</div>
                             <div class="verse-reference">— {verse_data.get('verse', '')}</div>
-                            <span class="verse-theme">🎯 {verse_data.get('theme', 'Weekly Verse')}</span>
+                            {verse_theme_html}
         """)
         
         # Optional pastor's comment
@@ -2267,10 +2351,12 @@ def generate_html():
         # Mission Update
         update_data = current_missions.get('update', {})
         if update_data:
-            html_parts.append(f"""
-                            <div class="mission-message">"{update_data.get('message', '')}"</div>
-                            <div class="mission-author">— {update_data.get('author', '')}</div>
-            """)
+            mission_msg = update_data.get('message', '')
+            mission_author = update_data.get('author', '')
+            if mission_msg:
+                html_parts.append(f'<div class="mission-message">"{mission_msg}"</div>')
+            if mission_author:
+                html_parts.append(f'<div class="mission-author">— {mission_author}</div>')
         
         # ========== PRAYER POINTS ==========
         prayer_points = current_missions.get('prayer_points', [])
@@ -2382,37 +2468,42 @@ def generate_html():
                     <div class="section-title">📅 Events</div>
     """)
 
-    #Get permanent event (Will always show)
-    permanant_events = tabs.get('events', {}).get('permanant', [])
+    permanant_events = [e for e in tabs.get('events', {}).get('permanant', []) if e]
+    monthly_events   = [e for e in tabs.get('events', {}).get(current_month, []) if e]
 
-    #Get monthly events
-    monthly_events = tabs.get('events', {}).get(current_month, [])
-
-    #Combine them (both permenant and monthly)
-    all_events = []
-
-    #Add perm events
-    for event in permanant_events:
-        if event:
-            all_events.append(event)
-
-    #Add monthly event
-    for event in monthly_events:
-        if event:
-            all_events.append(event)
-
-    # Add events
-    if all_events:
-        for event in all_events:
-            html_parts.append(f"""
-                        <div class="event-item">
+    def render_event(event, permanent=False):
+        css_class = "event-item event-item--permanent" if permanent else "event-item"
+        desc = event.get('description', '')
+        desc_html = f'<div class="event-description">{desc}</div>' if desc else ''
+        zoom = event.get('zoom_link', '')
+        meeting_id = event.get('meeting_id', '')
+        passcode = event.get('passcode', '')
+        if zoom:
+            zoom_html = f'<div class="event-detail"><a href="{zoom}" target="_blank">🔗 Join on Zoom</a></div>'
+        elif meeting_id:
+            zoom_html = f'<div class="event-detail">🔗 Join on Zoom</div>'
+        else:
+            zoom_html = ''
+        meeting_html = f'<div class="event-detail">Meeting ID: {meeting_id}</div>' if meeting_id else ''
+        passcode_html = f'<div class="event-detail">Passcode: {passcode}</div>' if passcode else ''
+        return f"""
+                        <div class="{css_class}">
                             <div class="event-title">{event['title']}</div>
                             <div class="event-detail">📅 {event['date']}</div>
                             <div class="event-detail">🕐 {event['time']}</div>
                             <div class="event-detail">📍 {event['location']}</div>
-                            <div class="event-description">{event['description']}</div>
+                            {desc_html}
+                            {zoom_html}
+                            {meeting_html}
+                            {passcode_html}
                         </div>
-            """) 
+        """
+
+    if permanant_events or monthly_events:
+        for event in permanant_events:
+            html_parts.append(render_event(event, permanent=True))
+        for event in monthly_events:
+            html_parts.append(render_event(event, permanent=False))
     else:
         html_parts.append(f"""
             <div class="event-item">
@@ -2430,9 +2521,15 @@ def generate_html():
     """)
     
     # Add announcements
-    for announcement in tabs['announcements']:
-        html_parts.append(f"""
+    announcements = tabs.get('announcements', [])
+    if announcements:
+        for announcement in announcements:
+            html_parts.append(f"""
                     <div class="announcement-item">{announcement}</div>
+            """)
+    else:
+        html_parts.append("""
+                    <div class="announcement-item" style="color:#7f8c8d; font-style:italic;">No announcements this month.</div>
         """)
     
     html_parts.append("""

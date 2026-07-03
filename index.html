@@ -582,6 +582,10 @@
             transform: translateX(5px);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
+
+        .event-item--permanent {
+            border-left-color: #e74c3c;
+        }
         
         .event-title {
             font-size: 22px;
@@ -1384,6 +1388,52 @@
             font-size: 16px;
         }
 
+        /* Did You Know mini-card */
+        .did-you-know {
+            background: rgba(0, 229, 86, 0.07);
+            border-radius: 14px;
+            padding: 18px 22px;
+            border-left: 5px solid rgba(0, 229, 86);
+            margin-top: 16px;
+        }
+
+        .did-you-know-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .did-you-know ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .did-you-know li {
+            font-size: 15px;
+            color: #444;
+            padding: 8px 0 8px 24px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 229, 86, 0.2);
+            line-height: 1.5;
+        }
+
+        .did-you-know li:last-child {
+            border-bottom: none;
+        }
+
+        .did-you-know li::before {
+            content: "?";
+            position: absolute;
+            left: 2px;
+            font-weight: bold;
+            color: rgba(0, 180, 70);
+        }
+
         /* ============================================
         RESPONSIVE DESIGN - MOBILE
         ============================================ */
@@ -1819,7 +1869,7 @@
             <div class="content-area">
                 <!-- HOME TAB (tab 0) -->
                 <div class="content-section active">
-                    <div class="section-title">Welcome <span class="date-badge">📅 01 July, 2026</span></div>
+                    <div class="section-title">Welcome <span class="date-badge">📅 July 2026</span></div>
                     <p class="welcome-text">Welcome to Great Commission Bible Church. We are a community of believers dedicated to spreading the Gospel and making disciples. Join us as we worship, learn, and grow together in faith.</p>
                     
                     <div class="rotating-message">
@@ -1834,12 +1884,6 @@
                             <div class="message-title">Sunday Service</div>
                             
                             <div class="message-text">Join us every Sunday at 9:00 AM for worship and fellowship</div>
-                        </div>
-        
-                        <div class="message ">
-                            <div class="message-title">🙏 Prayer For...</div>
-                            
-                            <div class="message-text">• The youth of Trinidad and Tobago <br> • This person <br> • Yourself</div>
                         </div>
         
                         <div class="message ">
@@ -1858,9 +1902,47 @@
                     
                     <!-- WISDOM TIP - Monthly -->
     
-                    <div class="no-wisdom">
-                        <span>💭</span>
-                        <p>Check back next month for a new wisdom tip!</p>
+                    <div class="wisdom-card">
+                        <div class="wisdom-header">
+                            <span class="wisdom-month-badge">💡 July Wisdom Tip</span>
+                        </div>
+                        <h3 class="wisdom-title">Disaster Preparedness Tips</h3>
+                        
+        
+                        <div class="wisdom-steps-title">📋 Tips:</div>
+                        <ul class="wisdom-steps">
+            
+                            <li>Trim trees and keep home surroundings clear of loose items.</li>
+            
+                            <li>Know the emergency numbers.</li>
+            
+                            <li>Learn to shut off your home's gas, electricity and water.</li>
+            
+                            <li>Choose a meeting place outside of home in case of separation or evacuation.</li>
+            
+                            <li>Store bottled water, non-perishable food items & manual opener.</li>
+            
+                            <li>Prepare first aid kit, essential medications, medical devices etc.</li>
+            
+                            <li>Secure important documents.</li>
+            
+                            <li>Keep portable phone chargers, flashlights with extra batteries.</li>
+            
+                            <li>Keep updated to local alerts and follow instructions.</li>
+            
+                        </ul>
+        
+                    </div>
+        
+                    <div class="did-you-know">
+                        <div class="did-you-know-header">📚 Did You Know?</div>
+                        <ul>
+        
+                            <li>The word "Bible" comes from the Greek term ta biblia, which literally translates to "the books".</li>
+            
+                            <li>The phrase "Do not be afraid" or "Fear not" is traditionally said to appear 365 times — one for every day of the year.</li>
+            
+                        </ul>
                     </div>
         
                 </div>  <!-- CLOSE HOME TAB content-section -->
@@ -1908,11 +1990,136 @@
                     <div class="section-title">📖 Sermons This Month (July)</div>
                     <div class="sermons-container">
     
-                        <div class="no-sermons">
-                            📖 No sermons yet this month.<br>
-                            Check back after Sunday service!
+                        <div class="sermon-card">
+                            <div class="sermon-header active" onclick="toggleSermon(this)">
+                                <span class="toggle-icon">▼</span>
+                                <span class="sermon-date">📅 July 7th</span>
+                                <h3 class="sermon-title">The secret to wholeness</h3>
+                            </div>
+                            <div class="sermon-content ">
+            <div class="sermon-scripture">📖 Luke 17:11-19</div><div class="sermon-summary">10 lepers cried out to Jesus for help. They did what he told them and were healed. Only 1 returned with thanksgiving to God. Jesus declared to him 'your Faith has made you whole'. Godliness with contentment is great gain (1 Tim 6:6).</div>
+                                <div class="key-points-title">💭 Key Points:</div>
+                                <ul class="key-points-list">
+                
+                                    <li>God has mercy on us even though we don't deserve it.</li>
+                    
+                                    <li>He extends promises to us when we obey His Word.</li>
+                    
+                                    <li>Faith works with you and God together.</li>
+                    
+                                    <li>All were healed, but only one returned with thanksgiving.</li>
+                    
+                                    <li>Will God lose you after you receive your miracle?</li>
+                    
+                                    <li>The secret to wholeness — be grateful for the miracles you already have in your life.</li>
+                    
+                                </ul>
+                
+                            </div>
                         </div>
-        
+            
+                        <div class="sermon-card">
+                            <div class="sermon-header " onclick="toggleSermon(this)">
+                                <span class="toggle-icon">▶</span>
+                                <span class="sermon-date">📅 July 14th</span>
+                                <h3 class="sermon-title">Faith makes things possible</h3>
+                            </div>
+                            <div class="sermon-content collapsed">
+            <div class="sermon-scripture">📖 Hebrews 11:1-3</div><div class="sermon-summary">Now Faith is the assurance (confirmation) of things hoped for (divinely guaranteed), and the evidence of things not seen (the conviction of their reality — faith comprehends as fact what cannot be seen). For by this kind of Faith, the men of old gained (divine) approval. By faith we understand that the universe was formed at God's command, so that what is seen was not made from what is visible.</div>
+                                <div class="key-points-title">💭 Key Points:</div>
+                                <ul class="key-points-list">
+                
+                                    <li>We are not of those who shrink back.</li>
+                    
+                                    <li>Faith causes us to receive understanding.</li>
+                    
+                                    <li>Faith causes action.</li>
+                    
+                                    <li>Faith illuminates the mind.</li>
+                    
+                                    <li>Faith comes from hearing the Word of God.</li>
+                    
+                                </ul>
+                
+                            </div>
+                        </div>
+            
+                        <div class="sermon-card">
+                            <div class="sermon-header " onclick="toggleSermon(this)">
+                                <span class="toggle-icon">▶</span>
+                                <span class="sermon-date">📅 July 21st</span>
+                                <h3 class="sermon-title">Encouragement for believers</h3>
+                            </div>
+                            <div class="sermon-content collapsed">
+            
+                                <div class="key-points-title">💭 Key Points:</div>
+                                <ul class="key-points-list">
+                
+                                    <li><strong>Humility:</strong></li>
+                    
+                                    <li>Consider others above yourself (Phil 2:3).</li>
+                    
+                                    <li>God opposes the proud, but shows favour to the humble (1 Peter 5:5).</li>
+                    
+                                    <li>Wisdom comes by humility (Pro 11:2).</li>
+                    
+                                    <li><strong>Faithfulness:</strong></li>
+                    
+                                    <li>God has compassion for us daily (Lam 3:22-23).</li>
+                    
+                                    <li>God is faithful to us, we need to be faithful to Him (2 Tim 2:13).</li>
+                    
+                                    <li><strong>Learning:</strong></li>
+                    
+                                    <li>Be quick to listen, slow to speak and slow to get angry (James 1:19).</li>
+                    
+                                    <li>Ask God — He will give us wisdom and He gives liberally (James 1:5).</li>
+                    
+                                    <li>Continue the process of learning; get wisdom, knowledge and understanding (Pro 4:7).</li>
+                    
+                                </ul>
+                
+                            </div>
+                        </div>
+            
+                        <div class="sermon-card">
+                            <div class="sermon-header " onclick="toggleSermon(this)">
+                                <span class="toggle-icon">▶</span>
+                                <span class="sermon-date">📅 July 28th</span>
+                                <h3 class="sermon-title">Keeping Faith alive</h3>
+                            </div>
+                            <div class="sermon-content collapsed">
+            <div class="sermon-scripture">📖 Hebrews 12:1-3</div><div class="sermon-summary">The race of life cannot be avoided. We must stay on course. Our race is already won. Our competitors are not flesh and blood. Run the race marked out for you. The Champion is Jesus.</div>
+                                <div class="key-points-title">💭 Key Points:</div>
+                                <ul class="key-points-list">
+                
+                                    <li><strong>Community:</strong></li>
+                    
+                                    <li>We are surrounded by 'a cloud of witnesses' — we are to be encouraged by those who have gone before us and by our community of believers.</li>
+                    
+                                    <li><strong>Focus:</strong></li>
+                    
+                                    <li>Look to Jesus.</li>
+                    
+                                    <li>Keep your eyes on the end.</li>
+                    
+                                    <li>Remind yourself of what the Bible says.</li>
+                    
+                                    <li><strong>Discipline:</strong></li>
+                    
+                                    <li>Resist sin with everything you have.</li>
+                    
+                                    <li>Embrace correction.</li>
+                    
+                                    <li>Do not fear discipline.</li>
+                    
+                                    <li>Discipline has its own reward.</li>
+                    
+                                </ul>
+                
+                            </div>
+                        </div>
+            
                     </div>
                 </div>
                 
@@ -1921,15 +2128,40 @@
                     <div class="section-title">✨ Inspire Corner</div>
                     <div class="inspire-container">
     
-                        <div class="no-wisdom" style="border-color: rgb(217, 52, 54); color: #7f8c8d;">
-                            <span>📖</span>
-                            <p>No verse this month. Check back soon!</p>
+                        <div class="verse-card">
+                            <div class="verse-icon">📖</div>
+                            <div class="verse-text">"If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you."</div>
+                            <div class="verse-reference">— James 1:5</div>
+                            
+        
                         </div>
         
-                        <div class="no-testimony">
-                            <span>🌟</span>
-                            <p>No testimony this month.</p>
-                            <p style="font-size: 14px; margin-top: 10px;">Check back next month or share your own!</p>
+                        <div class="testimony-section">
+                            <div class="testimony-header">
+                                <span class="testimony-icon">🌟</span>
+                                <h3 class="testimony-title">Featured Testimony</h3>
+                            </div>
+                            <div class="testimony-scrollbox">
+                                <div class="testimony-card">
+                                    <div class="testimony-quote">❝</div>
+                                    <div class="testimony-text">My name is Dianne Charles and I was christened into the Roman Catholic Faith and followed the traditions of that religion. While practicing my faith, inwardly I questioned some of their cultural practices and teachings, but went along with them.
+
+Their teaching of purgatory after death as a temporal place until purification gave me a false hope, that I will still have a chance of eternal salvation after purification, which will enable me to achieve the holiness necessary to enter the joy of heaven.
+
+However Great Commission Bible Church hosted a missionary outreach in my Apartment Building, after which I started to fellowship with the church. I was baptized into Christianity on July 6th 2003 and have seen God working in my life in ways that I could never have imagined and there is no turning back.
+
+In hindsight I would now realize that when I was approached by the Pastor of GCBC to be a member of the Leadership Committee, he was being lead by the Holy Spirit and a call to Ministry. This calling has encouraged me to read more of God's Word to build a personal relationship with Him. I believe in his promises which gives me greater assurance that He will guide me according to James 1:5 which says "But if any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach and it will be given to him".
+
+Being a member of the Leadership Committee has also allowed me to use my Spiritual Gift of Administration and by extension gave me the opportunity to participate in the many ministries of the Church. In the performance of these duties I have developed a bond with my sisters especially through our Prayer Group and Ladies Group. I am now able to identify when one of them is hurting in silence, the bond which I share with them gives me the confidence to approach them with an aim to listen, guide and/or assist in any way that I can. I am therefore seeing the spiritual gift of mercy manifesting itself more and more in my life.
+
+I continue to thank God for giving me the wisdom and guidance as I endeavor to do my best while I strive for excellence.</div>
+                                    <div class="testimony-author">— Dianne Charles</div>
+                                    <div class="testimony-date">July 2026</div>
+        
+                                    <div class="testimony-verse">📖 James 1:5</div>
+        
+                                </div>
+                            </div>
                         </div>
         
                         <div class="share-cta">
@@ -1945,19 +2177,31 @@
                     <div class="section-title">🌍 Missions - July</div>
                     <div class="missions-container">
     
-                        <div class="no-mission">
-                            <span>🌍</span>
-                            <h3>No Missions Testimony This Month</h3>
-                            <p>Check back next month for updates from our missionaries around the world!</p>
-                            <div class="prayer-suggestions">
-                                <h4>🙏 In the meantime, please pray for:</h4>
-                                <ul>
-                                    <li>All missionaries serving globally</li>
-                                    <li>Upcoming mission teams</li>
-                                    <li>Open hearts in every nation</li>
-                                    <li>Safety and provision for our partners</li>
+                        <div class="mission-card">
+                            <div class="mission-header">
+                                <span class="mission-icon">🌍</span>
+                                <h3 class="mission-title">Missionaries</h3>
+                                <span class="mission-location">July 2026</span>
+                            </div>
+        <div class="mission-message">"Continued prayer & support for all missionaries including:"</div>
+                            <div class="prayer-section">
+                                <div class="prayer-header">
+                                    <span>🙏</span>
+                                    <span>Prayer Focus</span>
+                                </div>
+                                <ul class="prayer-list">
+            
+                                    <li>The Yearwoods</li>
+                
+                                    <li>The Hewitts</li>
+                
+                                    <li>Oral Bible Translators</li>
+                
+                                    <li>Shanna Elliot-Mohammed</li>
+                
                                 </ul>
                             </div>
+            
                         </div>
         
                     </div>
@@ -1967,30 +2211,38 @@
                 <div class="content-section">
                     <div class="section-title">📅 Events</div>
     
-                        <div class="event-item">
+                        <div class="event-item event-item--permanent">
                             <div class="event-title">Sunday Worship Service</div>
                             <div class="event-detail">📅 Every Sunday</div>
                             <div class="event-detail">🕐 9:00 AM</div>
                             <div class="event-detail">📍 Think Art Work Studio, Level 2 THINKARTWORKTT</div>
                             <div class="event-description">Join us for worship, prayer, and fellowship</div>
+                            <div class="event-detail">🔗 Join on Zoom</div>
+                            <div class="event-detail">Meeting ID: 838 7245 2480</div>
+                            <div class="event-detail">Passcode: 985939</div>
                         </div>
-            
-                        <div class="event-item">
+        
+                        <div class="event-item event-item--permanent">
                             <div class="event-title">Kids Club</div>
                             <div class="event-detail">📅 Every Sunday</div>
                             <div class="event-detail">🕐 10:15 AM</div>
                             <div class="event-detail">📍 Think Art Work Studio, Level 2 THINKARTWORKTT</div>
-                            <div class="event-description"></div>
+                            
+                            
+                            
+                            
                         </div>
-            
+        
                 </div>
                 
                 <!-- ANNOUNCEMENTS TAB (tab 7) -->
                 <div class="content-section">
                     <div class="section-title">📢 Announcements</div>
     
-                    <div class="announcement-item">Family Meeting next month, March 15</div>
-        
+                    <div class="announcement-item">2nd - 7th August AEBC holiday camp VHC</div>
+            
+                    <div class="announcement-item">Back to school drive - To Be Announced</div>
+            
                 </div>
                 
                 <!-- CONTACT TAB (tab 8) -->
@@ -2004,7 +2256,7 @@
                         </div>
                         <div class="contact-item">
                             <div class="contact-label">Mail</div>
-                            <div class="contact-value">GCBC c/o Terry Ann Derrick, #4 Issac Place Cascade</div>
+                            <div class="contact-value">GCBC c/o Terry Ann Derrick, #4 Isaac Place Cascade</div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-label">Email</div>
@@ -2028,7 +2280,7 @@
                     </div>
                     <div class="about-section">
                         <div class="about-heading">Leadership</div>
-                        <div class="about-text">Shannon Fancis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno</div>
+                        <div class="about-text">Shannon Francis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno</div>
                     </div>
                 </div>
             </div>

@@ -15,10 +15,6 @@
       "text": "Join us every Sunday at 9:00 AM for worship and fellowship"
     },
     {
-      "title": "🙏 Prayer For...",
-      "text": "• The youth of Trinidad and Tobago <br> • This person <br> • Yourself"
-    },
-    {
       "title": "Peter's Fishing",
       "text": "Jesus walked up to Peter and said, 'Follow me, and I will make you fishers of men.' Peter replied, 'That's great, but can you teach me to catch something for dinner first?'"
     },
@@ -58,7 +54,73 @@
       "April": [{}],
       "May": [{}],
       "June": [{}],
-      "July": [{}],
+      "July": [
+        {
+          "date": 7,
+          "title": "The secret to wholeness",
+          "scripture": "Luke 17:11-19",
+          "summary": "10 lepers cried out to Jesus for help. They did what he told them and were healed. Only 1 returned with thanksgiving to God. Jesus declared to him 'your Faith has made you whole'. Godliness with contentment is great gain (1 Tim 6:6).",
+          "key_points": [
+            "God has mercy on us even though we don't deserve it.",
+            "He extends promises to us when we obey His Word.",
+            "Faith works with you and God together.",
+            "All were healed, but only one returned with thanksgiving.",
+            "Will God lose you after you receive your miracle?",
+            "The secret to wholeness — be grateful for the miracles you already have in your life."
+          ]
+        },
+        {
+          "date": 14,
+          "title": "Faith makes things possible",
+          "scripture": "Hebrews 11:1-3",
+          "summary": "Now Faith is the assurance (confirmation) of things hoped for (divinely guaranteed), and the evidence of things not seen (the conviction of their reality — faith comprehends as fact what cannot be seen). For by this kind of Faith, the men of old gained (divine) approval. By faith we understand that the universe was formed at God's command, so that what is seen was not made from what is visible.",
+          "key_points": [
+            "We are not of those who shrink back.",
+            "Faith causes us to receive understanding.",
+            "Faith causes action.",
+            "Faith illuminates the mind.",
+            "Faith comes from hearing the Word of God."
+          ]
+        },
+        {
+          "date": 21,
+          "title": "Encouragement for believers",
+          "scripture": "",
+          "summary": "",
+          "key_points": [
+            "<strong>Humility:</strong>",
+            "Consider others above yourself (Phil 2:3).",
+            "God opposes the proud, but shows favour to the humble (1 Peter 5:5).",
+            "Wisdom comes by humility (Pro 11:2).",
+            "<strong>Faithfulness:</strong>",
+            "God has compassion for us daily (Lam 3:22-23).",
+            "God is faithful to us, we need to be faithful to Him (2 Tim 2:13).",
+            "<strong>Learning:</strong>",
+            "Be quick to listen, slow to speak and slow to get angry (James 1:19).",
+            "Ask God — He will give us wisdom and He gives liberally (James 1:5).",
+            "Continue the process of learning; get wisdom, knowledge and understanding (Pro 4:7)."
+          ]
+        },
+        {
+          "date": 28,
+          "title": "Keeping Faith alive",
+          "scripture": "Hebrews 12:1-3",
+          "summary": "The race of life cannot be avoided. We must stay on course. Our race is already won. Our competitors are not flesh and blood. Run the race marked out for you. The Champion is Jesus.",
+          "key_points": [
+            "<strong>Community:</strong>",
+            "We are surrounded by 'a cloud of witnesses' — we are to be encouraged by those who have gone before us and by our community of believers.",
+            "<strong>Focus:</strong>",
+            "Look to Jesus.",
+            "Keep your eyes on the end.",
+            "Remind yourself of what the Bible says.",
+            "<strong>Discipline:</strong>",
+            "Resist sin with everything you have.",
+            "Embrace correction.",
+            "Do not fear discipline.",
+            "Discipline has its own reward."
+          ]
+        }
+      ],
       "August": [{}],
       "September": [{}],
       "October": [{}],
@@ -72,7 +134,10 @@
           "date": "Every Sunday",
           "time": "9:00 AM",
           "location": "Think Art Work Studio, Level 2 THINKARTWORKTT",
-          "description": "Join us for worship, prayer, and fellowship"
+          "description": "Join us for worship, prayer, and fellowship",
+          "zoom_link": "",
+          "meeting_id": "838 7245 2480",
+          "passcode": "985939"
         },
         {
           "title": "Kids Club",
@@ -96,17 +161,18 @@
       "December": [{}]
     },
     "announcements": [
-      "Family Meeting next month, March 15"
+      "2nd - 7th August AEBC holiday camp VHC",
+      "Back to school drive - To Be Announced"
     ],
     "contact": {
       "phone": "1-(868)-299-8281",
-      "mail": "GCBC c/o Terry Ann Derrick, #4 Issac Place Cascade",
+      "mail": "GCBC c/o Terry Ann Derrick, #4 Isaac Place Cascade",
       "email": "greatcommissiontt@gmail.com",
       "address": "Think Art Work Studio, Level 2 THINKARTWORKTT, 11 Cipriani Boulevard, Port of Spain."
     },
     "about": {
       "mission": "By His <span class='highlight'>Power</span><br>Though His <span class='highlight'>Plan</span><br>With Him <span class='highlight'>Present</span><br>We Will <span class='highlight'>Partner</span> Together<br>To <span class='highlight'>Produce</span> Disciples",
-      "leadership": "Shannon Fancis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno"
+      "leadership": "Shannon Francis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno"
     },
     "birthdays": {
       "January": [
@@ -493,7 +559,30 @@
       "April": {},
       "May": {},
       "June": {},
-      "July": {},
+      "July": {
+        "title": "Disaster Preparedness Tips",
+        "tip": "",
+        "steps_label": "Tips",
+        "steps": [
+          "Trim trees and keep home surroundings clear of loose items.",
+          "Know the emergency numbers.",
+          "Learn to shut off your home's gas, electricity and water.",
+          "Choose a meeting place outside of home in case of separation or evacuation.",
+          "Store bottled water, non-perishable food items & manual opener.",
+          "Prepare first aid kit, essential medications, medical devices etc.",
+          "Secure important documents.",
+          "Keep portable phone chargers, flashlights with extra batteries.",
+          "Keep updated to local alerts and follow instructions."
+        ],
+        "verse": "",
+        "verse_text": "",
+        "theme": "",
+        "author": "",
+        "did_you_know": [
+          "The word \"Bible\" comes from the Greek term ta biblia, which literally translates to \"the books\".",
+          "The phrase \"Do not be afraid\" or \"Fear not\" is traditionally said to appear 365 times — one for every day of the year."
+        ]
+      },
       "August": {},
       "September": {},
       "October": {},
@@ -519,7 +608,19 @@
       "April": {},
       "May": {},
       "June": {},
-      "July": {},
+      "July": {
+        "verse_of_the_month": {
+          "verse": "James 1:5",
+          "text": "If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you.",
+          "theme": ""
+        },
+        "featured_testimony": {
+          "name": "Dianne Charles",
+          "date": "July 2026",
+          "testimony": "My name is Dianne Charles and I was christened into the Roman Catholic Faith and followed the traditions of that religion. While practicing my faith, inwardly I questioned some of their cultural practices and teachings, but went along with them.\n\nTheir teaching of purgatory after death as a temporal place until purification gave me a false hope, that I will still have a chance of eternal salvation after purification, which will enable me to achieve the holiness necessary to enter the joy of heaven.\n\nHowever Great Commission Bible Church hosted a missionary outreach in my Apartment Building, after which I started to fellowship with the church. I was baptized into Christianity on July 6th 2003 and have seen God working in my life in ways that I could never have imagined and there is no turning back.\n\nIn hindsight I would now realize that when I was approached by the Pastor of GCBC to be a member of the Leadership Committee, he was being lead by the Holy Spirit and a call to Ministry. This calling has encouraged me to read more of God's Word to build a personal relationship with Him. I believe in his promises which gives me greater assurance that He will guide me according to James 1:5 which says \"But if any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach and it will be given to him\".\n\nBeing a member of the Leadership Committee has also allowed me to use my Spiritual Gift of Administration and by extension gave me the opportunity to participate in the many ministries of the Church. In the performance of these duties I have developed a bond with my sisters especially through our Prayer Group and Ladies Group. I am now able to identify when one of them is hurting in silence, the bond which I share with them gives me the confidence to approach them with an aim to listen, guide and/or assist in any way that I can. I am therefore seeing the spiritual gift of mercy manifesting itself more and more in my life.\n\nI continue to thank God for giving me the wisdom and guidance as I endeavor to do my best while I strive for excellence.",
+          "verse": "James 1:5"
+        }
+      },
       "August": {},
       "September": {},
       "October": {},
@@ -559,7 +660,19 @@
       "April": {},
       "May": {},
       "June": {},
-      "July": {},
+      "July": {
+        "featured": "Missionaries",
+        "update": {
+          "message": "Continued prayer & support for all missionaries including:",
+          "author": ""
+        },
+        "prayer_points": [
+          "The Yearwoods",
+          "The Hewitts",
+          "Oral Bible Translators",
+          "Shanna Elliot-Mohammed"
+        ]
+      },
       "August": {},
       "September": {},
       "October": {},
