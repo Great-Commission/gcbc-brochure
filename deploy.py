@@ -85,7 +85,8 @@ def deploy():
          "Images",
          "slideshow_folder",
          "generate_brochure.py",
-         "deploy.py"
+         "deploy.py",
+         ".nojekyll"
     ])
 
     # Commit only if something changed since last commit
