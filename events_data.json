@@ -8,7 +8,7 @@
     {
       "title": "The Great Commission",
       "scripture": "Matthew 28:18-20",
-      "text": "Then Jesus came to them and said, \"All authority on heaven and on earth has been given to Me. Therefore go and make disciples of all nations baptizing them in the name of the Father, and of the Holy Spirit and teaching them to obey everything I have commanded you and surely I am with you always, to the very end of age\""
+      "text": "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to Me. Therefore go and make disciples of all nations baptizing them in the name of the Father, the Son and of the Holy Spirit and teaching them to obey everything I have commanded you and surely I am with you always, to the very end of age\""
     },
     {
       "title": "Sunday Service",
@@ -111,7 +111,7 @@
             "We are surrounded by 'a cloud of witnesses' — we are to be encouraged by those who have gone before us and by our community of believers.",
             "<strong>Focus:</strong>",
             "Look to Jesus.",
-            "Keep your eyes on the end.",
+            "Keep your eyes on the end of the age.",
             "Remind yourself of what the Bible says.",
             "<strong>Discipline:</strong>",
             "Resist sin with everything you have.",
@@ -153,7 +153,15 @@
       "April": [{}],
       "May": [{}],
       "June": [{}],
-      "July": [{}],
+      "July": [
+        {
+          "title": "Back to School Drive",
+          "date": "Saturday 25th July",
+          "time": "",
+          "location": "",
+          "description": ""
+        }
+      ],
       "August": [{}],
       "September": [{}],
       "October": [{}],
@@ -161,8 +169,7 @@
       "December": [{}]
     },
     "announcements": [
-      "2nd - 7th August AEBC holiday camp VHC",
-      "Back to school drive - To Be Announced"
+      "2nd - 7th August AEBC holiday camp VHC"
     ],
     "contact": {
       "phone": "1-(868)-299-8281",
