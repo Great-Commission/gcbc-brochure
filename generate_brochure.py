@@ -28,6 +28,11 @@ def generate_html():
         current_month = datetime.now().strftime('%B')
         current_date = datetime.now().strftime('%B %Y')
 
+    # Sermons are always from the previous month (relative to whatever month is active)
+    _month_names = ["January","February","March","April","May","June",
+                    "July","August","September","October","November","December"]
+    sermon_month = _month_names[_month_names.index(current_month) - 1]
+
     
     # Helper function to split text into vertical letters
     def vertical_text(word):
@@ -2114,7 +2119,7 @@ def generate_html():
                 
                 <!-- SERMONS TAB (tab 3) -->
                 <div class="content-section">
-                    <div class="section-title">📖 Sermons This Month ({current_month})</div>
+                    <div class="section-title">📖 Sermons: {sermon_month}</div>
                     <div class="sermons-container">
     """)
 
@@ -2146,7 +2151,7 @@ def generate_html():
                         <div class="sermon-card">
                             <div class="sermon-header {header_active}" onclick="toggleSermon(this)">
                                 <span class="toggle-icon">{toggle_icon}</span>
-                                <span class="sermon-date">📅 {current_month} {formatted_date}</span>
+                                <span class="sermon-date">📅 {sermon_month} {formatted_date}</span>
                                 <h3 class="sermon-title">{sermon.get('title', 'Sermon')}</h3>
                             </div>
                             <div class="sermon-content {content_class}">
