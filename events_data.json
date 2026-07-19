@@ -155,10 +155,24 @@
       "June": [{}],
       "July": [
         {
-          "title": "Back to School Drive",
+          "title": "GCBC Back to School Drive",
           "date": "Saturday 25th July",
           "time": "To Be Determined",
           "location": "St Anns Bible Church",
+          "description": ""
+        },
+        {
+          "title": "Camp Fundraiser — Sada and Choka Sale",
+          "date": "Sunday 26th July",
+          "time": "",
+          "location": "",
+          "description": ""
+        },
+        {
+          "title": "AEBC Joint Prayer Q3",
+          "date": "Sunday 26th July",
+          "time": "",
+          "location": "Red Hill/Maloney EBC",
           "description": ""
         }
       ],
@@ -169,7 +183,7 @@
       "December": [{}]
     },
     "announcements": [
-      "2nd - 7th August AEBC holiday camp VHC"
+      "Aug 2nd - 7th: AEBC Holiday Camp — Victory Heights Bible Camp"
     ],
     "contact": {
       "phone": "1-(868)-299-8281",
