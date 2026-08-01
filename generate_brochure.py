@@ -1635,7 +1635,7 @@ def generate_html():
 
             /* ========== BOTTOM SECTION - TABS + CONTENT ========== */
             .left-container {{
-                order: 1 !important;
+                order: 2 !important;
                 width: 100%;
                 height: auto !important;
                 display: flex;
