@@ -121,7 +121,121 @@
           ]
         }
       ],
-      "August": [{}],
+      "August": [
+        {
+          "date": 5,
+          "title": "Questions on Faith (Group participation)",
+          "scripture": "",
+          "summary": "",
+          "key_points": [
+            {
+              "type": "ordered",
+              "items": [
+                "How does Abel/Noah/Abraham/Moses/Rehab experience with God demonstrate walking in faith?",
+                "What are some of the ways our faith is challenged?",
+                "What can we do when our faith is challenged?",
+                "How do we keep our faith alive?",
+                "Create a scenario where someone's faith is challenged, and use biblical principles to overcome."
+              ]
+            }
+          ]
+        },
+        {
+          "date": 12,
+          "title": "Securing your faith",
+          "scripture": "Hebrews 13:7-17",
+          "summary": "As we seek to ensure that we serve God continuously and faithfully, let us appreciate the importance of submitting ourselves, sharing the gospel and living a sacrificial life.",
+          "key_points": [
+            {
+              "heading": "Submission:",
+              "type": "unordered",
+              "items": [
+                "Follow the instructions of leaders",
+                "Examine the results of the life",
+                "Have an attitude of submission",
+                "Understand that their work is spiritual",
+                "Help them to help you"
+              ]
+            },
+            {
+              "heading": "Salvation (Gospel of):",
+              "type": "unordered",
+              "items": [
+                "Do not seek comfort",
+                "Go beyond your safe spaces",
+                "Identify with the shame of Christ (vs 13)",
+                "Carry the Word of God with you"
+              ]
+            },
+            {
+              "heading": "Sacrifice:",
+              "type": "unordered",
+              "items": [
+                "Jesus the ultimate and final Sacrifice for sin",
+                "We now offer sacrifices of praise (with our lips)",
+                "The evidence of our sacrificial heart is in doing good",
+                "God is pleased with us when we do good"
+              ]
+            }
+          ]
+        },
+        {
+          "date": 19,
+          "title": "What God wants us to do with His Word",
+          "scripture": "Revelation 1:1-3",
+          "summary": "God exposes coming realities for the benefit of the Church of Jesus Christ.",
+          "key_points": [
+            {
+              "heading": "Be Encouraged:",
+              "type": "unordered",
+              "items": [
+                "The Church is provided with knowledge of future events that are unfolding",
+                "Nothing that is happening is a surprise to God and it should not be to the Church",
+                "We should be able to see the hand of God moving in all Earth's events"
+              ]
+            },
+            {
+              "heading": "Be Witnesses:",
+              "type": "unordered",
+              "items": [
+                "See God's Word unfolding (seek it out)",
+                "Spread the knowledge of the Gospel",
+                "Share with others, your experience with Jesus"
+              ]
+            },
+            {
+              "heading": "Be Obedient:",
+              "type": "unordered",
+              "items": [
+                "There is a blessing for those who obey",
+                "Stay in the Word of God (read it, listen to it, be where it is)",
+                "Follow the instructions the Word of God gives"
+              ]
+            }
+          ]
+        },
+        {
+          "date": 26,
+          "title": "Introduction to Revelation",
+          "scripture": "Revelation 1:4-20",
+          "summary": "John writes to the seven churches in the province of Asia and relates to them what he saw in the vision he received from Jesus Christ.",
+          "key_points": [
+            {
+              "type": "unordered",
+              "items": [
+                "The number 7 signifies completion, divine perfection",
+                "The number 6, the number of mankind, the 6th day of creation",
+                "The 7 churches applies also to the global church, the complete church",
+                "The Alpha and the Omega - the beginning and the end",
+                "Lampstands representing the source of light",
+                "Dressed in white speaks of purity",
+                "Verses 9-11 gives a clear imagery of Jesus dictating to John what he should write to the 7 churches",
+                "Jesus to John, 'Write what you have seen, what is now and what will take place'"
+              ]
+            }
+          ]
+        }
+      ],
       "September": [{}],
       "October": [{}],
       "November": [{}],
@@ -193,7 +307,72 @@
     },
     "about": {
       "mission": "By His <span class='highlight'>Power</span><br>Though His <span class='highlight'>Plan</span><br>With Him <span class='highlight'>Present</span><br>We Will <span class='highlight'>Partner</span> Together<br>To <span class='highlight'>Produce</span> Disciples",
-      "leadership": "Shannon Francis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno"
+      "leadership": "Shannon Francis, Stephan Elliot, Terry Ann Derrick, Dianne Charles, Crystal Thomas-Moreno",
+      "ministries": [
+        {
+          "name": "Prayer",
+          "representative": "Brother Dexter Kanhai",
+          "team_members": [
+            "Elder Shannon Francis, Sisters Denise Theophilus & Vanessa Hernandez"
+          ]
+        },
+        {
+          "name": "Visitors & Members Care",
+          "representative": "Sister Cherryl Ann Kanhai",
+          "team_members": [
+            "Sisters Natasha Elliot, Denise Theophilus, Dianne Charles"
+          ],
+          "note": "Volunteer: Brother Dexter Kanhai"
+        },
+        {
+          "name": "Fund Raising",
+          "representative": "Sister Terry-Ann Derrick",
+          "team_members": [
+            "Sisters Juanita Elliot, Verna Haynes & Tricia Kalloo (overseas)"
+          ]
+        },
+        {
+          "name": "Ladies Ministry",
+          "representative": "Sister Denise Theophilus",
+          "team_members": [
+            "Sisters Terry Ann Derrick, Carmen Elliot, Dianne Charles"
+          ]
+        },
+        {
+          "name": "Sports & Camping Ministry",
+          "representative": "Elder Shannon Francis",
+          "team_members": [
+            "Brothers Marcus Moreno, Carlyle Theophilus & Kyron Khan",
+            "Sisters Leah Elliot & Leah Fouchong"
+          ]
+        },
+        {
+          "name": "Kids",
+          "representative": "",
+          "team_members": [
+            "Sisters Natasha Elliot, Shanna Elliot-Mohammed & Crystal Moreno",
+            "Brother Stafford Elliot"
+          ]
+        },
+        {
+          "name": "Benevolence",
+          "representative": "Sister Crystal Moreno",
+          "team_members": [
+            "Sisters Carmen Elliot, Leah Fouchong",
+            "Brothers Sean Jardine, Daryl Elliot"
+          ]
+        },
+        {
+          "name": "Men",
+          "representative": "Elder Stephan Elliot",
+          "team_members": []
+        },
+        {
+          "name": "Worship",
+          "representative": "Elder Stephan Elliot",
+          "team_members": []
+        }
+      ]
     },
     "birthdays": {
       "January": [
@@ -604,7 +783,18 @@
           "The phrase \"Do not be afraid\" or \"Fear not\" is traditionally said to appear 365 times — one for every day of the year."
         ]
       },
-      "August": {},
+      "August": {
+         "title": "Scriptural prayer on behalf of believers",
+        "tip": "",
+        "steps_label": "Tips",
+        "steps": [
+          "Ask God to fill us with the Knowledge of His will in all wisdom and spiritual understanding (Col 1:9).",
+          "That we may walk worthy of the Lord, fully pleasing Him, being fruitful in every good work and increasing in the knowledge of God (Col 1:10).",
+          "For us to be strengthened with all might according to His glorious power, so that we may have all the patience and endurance we need, with joy (Col 1:11).",
+          "That we will be able to understand, as all God's people should know, how wide, how long, how high and how deep the love of Christ really is (Eph 3:18).",
+          "That we will always give thanks to the Father, who has qualified us to share the inheritance of the saints who live in the light. (Col 1:12)."
+        ]
+      },
       "September": {},
       "October": {},
       "November": {},
@@ -642,7 +832,19 @@
           "verse": "James 1:5"
         }
       },
-      "August": {},
+      "August": {
+        "verse_of_the_month": {
+          "verse": "Psalm 34:14",
+          "text": "Turn away from evil and do good, seek peace and pursue it.",
+          "theme": ""
+        },
+        "featured_testimony": {
+          "name": "Testimony Time",
+          "date": "August 2026",
+          "testimony": "Summary of testimonies during Testimony time:\n1. Being thankful for meeting a stranger years ago and developing a dependable lasting friendship of support and encouragement for each other.\n2. An account of a work related meeting that led to discussions on a Bible verse about leaving evil behind and actively pursuing peace.\n3. Giving thanks to God for the way He picks us up when we lose our focus, similarly to how Jesus reached out and rescued Peter when he started to walk on the water but instead focused on his surroundings and began to sink.\n4. Encouragement from 1 John 5:14 which states we can be confident that God hears us when we ask anything according to His will, and if we know He hears us, we can be sure that He will give us what we asked for.\n5. A testimony of being grateful to God for allowing that person to be a good witness when others are looking on, instead of being a stumbling block to them.\n6. Thanking God for clearing the lanes of a busy highway in order to safely reach on the Shoulder during a dangerous vehicular emergency.\n7. Giving thanks to God for waking them from sleep to be aware of a leaking gas tank and protecting the family from what could have been a dangerous situation.",
+          "verse": ""
+        }
+      },
       "September": {},
       "October": {},
       "November": {},

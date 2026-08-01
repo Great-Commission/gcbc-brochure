@@ -1073,6 +1073,30 @@ def generate_html():
             top: 5px;
         }}
 
+        .key-points-list.ordered {{
+            list-style: decimal;
+            padding-left: 22px;
+        }}
+
+        .key-points-list.ordered li {{
+            padding: 8px 0 8px 6px;
+        }}
+
+        .key-points-list.ordered li:before {{
+            content: none;
+        }}
+
+        .key-points-subheading {{
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 14px 0 6px;
+        }}
+
+        .key-points-subheading:first-child {{
+            margin-top: 0;
+        }}
+
         /* No sermons message */
         .no-sermons {{
             display: block !important;
@@ -1152,7 +1176,40 @@ def generate_html():
             font-weight: bold;
             color: rgb(230, 7, 7);
         }}
-        
+
+        /* Ministries grid (reuses .contact-grid for layout) */
+        .ministry-card {{
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }}
+
+        .ministry-name {{
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }}
+
+        .ministry-rep, .ministry-team {{
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }}
+
+        .ministry-rep strong, .ministry-team strong {{
+            color: #3498db;
+        }}
+
+        .ministry-note {{
+            font-size: 13px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-top: 8px;
+        }}
+
         /* ============================================
            RIGHT CONTAINER - Church Info + Slideshow
            ============================================ */
@@ -2164,19 +2221,31 @@ def generate_html():
                 html_parts.append(f'<div class="sermon-summary">{summary}</div>')
             
             # Add key points
+            # Supports two formats:
+            #   1. Flat list of strings -> single bulleted <ul> (legacy format)
+            #   2. List of group objects {heading, type, items} -> optional heading
+            #      followed by a real <ol> (type: "ordered") or <ul> (type: "unordered")
             key_points = sermon.get('key_points', [])
             if key_points:
                 html_parts.append(f"""
                                 <div class="key-points-title">💭 Key Points:</div>
-                                <ul class="key-points-list">
                 """)
-                for point in key_points:
-                    html_parts.append(f"""
-                                    <li>{point}</li>
-                    """)
-                html_parts.append("""
-                                </ul>
-                """)
+                if all(isinstance(p, dict) for p in key_points):
+                    for group in key_points:
+                        heading = group.get('heading', '')
+                        if heading:
+                            html_parts.append(f'<div class="key-points-subheading">{heading}</div>')
+                        list_tag = 'ol' if group.get('type') == 'ordered' else 'ul'
+                        list_class = 'ordered' if list_tag == 'ol' else ''
+                        html_parts.append(f'<{list_tag} class="key-points-list {list_class}">')
+                        for item in group.get('items', []):
+                            html_parts.append(f'<li>{item}</li>')
+                        html_parts.append(f'</{list_tag}>')
+                else:
+                    html_parts.append('<ul class="key-points-list">')
+                    for point in key_points:
+                        html_parts.append(f'<li>{point}</li>')
+                    html_parts.append('</ul>')
             
             html_parts.append("""
                             </div>
@@ -2587,10 +2656,47 @@ def generate_html():
                         <div class="about-heading">Leadership</div>
                         <div class="about-text">{about['leadership']}</div>
                     </div>
+    """)
+
+    # Ministries grid (optional)
+    ministries = about.get('ministries', [])
+    if ministries:
+        html_parts.append("""
+                    <div class="about-section">
+                        <div class="about-heading">Ministries</div>
+                        <div class="contact-grid">
+        """)
+        for ministry in ministries:
+            rep = ministry.get('representative', '')
+            rep_html = f'<div class="ministry-rep"><strong>Representative:</strong> {rep}</div>' if rep else ''
+
+            team = ministry.get('team_members', [])
+            team_html = ''
+            if team:
+                team_lines = '<br>'.join(team)
+                team_html = f'<div class="ministry-team"><strong>Team:</strong> {team_lines}</div>'
+
+            note = ministry.get('note', '')
+            note_html = f'<div class="ministry-note">{note}</div>' if note else ''
+
+            html_parts.append(f"""
+                            <div class="ministry-card">
+                                <div class="ministry-name">{ministry.get('name', '')}</div>
+                                {rep_html}
+                                {team_html}
+                                {note_html}
+                            </div>
+            """)
+        html_parts.append("""
+                        </div>
+                    </div>
+        """)
+
+    html_parts.append(f"""
                 </div>
             </div>
         </div>
-        
+
         <!-- RIGHT: Church Info with Slideshow Background -->
         <div class="right-container">
             <!-- Slideshow Background -->
